@@ -1,87 +1,87 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:2:1-32:12
 	xmlns:android
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:2:11-69
 	package
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:3:5-38
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WAKE_LOCK
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:6:5-68
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:6:22-65
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:6:22-65
 application
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:8:5-30:19
-MERGED from [com.android.support:appcompat-v7:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:8:5-30:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:11:9-41
 	android:allowBackup
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.runrunluo.runrunluo.ui.SplashActivity
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:screenOrientation
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:53-89
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:53-89
 	android:theme
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:90-126
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:90-126
 	android:name
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:19-52
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:19-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:19:27-74
 activity#com.runrunluo.runrunluo.ui.MainActivity
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:9-84
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:9-84
 	android:name
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:19-50
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:19-50
 	android:launchMode
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:51-82
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:51-82
 service#com.runrunluo.runrunluo.widget.stepdetector.StepCounterService
-ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:25:9-28:39
+ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:25:9-28:39
 	android:priority
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:28:13-36
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:28:13-36
 	android:exported
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml:26:13-67
+		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:26:13-67
 uses-sdk
-INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidStudioProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.3.0] G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75

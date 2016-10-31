@@ -1,5 +1,9 @@
 [
     {
+        "merged": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "G:\\GithubProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
         "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
