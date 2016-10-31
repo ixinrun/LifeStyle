@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcProgresslView">
+        <attr name="ArcColor" format="color"/>
+        <attr name="ArcProgressColor" format="color"/>
+        <attr name="ArcWidth" format="dimension"/>
+        <attr name="ToAnimal" format="boolean"/>
+        <attr name="duration" format="integer"/>
+        <attr name="LineWidth" format="integer"/>
+        <attr name="LineSpace" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\running_icon0.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\running_icon0.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\running_icon1.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\running_icon1.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\data_left_a.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\data_left_a.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\data_left_b.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\data_left_b.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\main_bottom_step_a.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\main_bottom_step_a.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\main_bottom_mycenter_b.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\main_bottom_mycenter_b.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\main_bottom_step_b.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\main_bottom_step_b.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\main_bottom_function_b.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\main_bottom_function_b.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\main_bottom_mycenter_a.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\main_bottom_mycenter_a.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\main_bottom_function_a.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\main_bottom_function_a.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\data_right_b.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\data_right_b.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\share_icon.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\share_icon.png"
+    },
+    {
+        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\data_right_a.png",
+        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xxhdpi\\data_right_a.png"
+    }
+]

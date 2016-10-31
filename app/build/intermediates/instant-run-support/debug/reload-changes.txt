@@ -1,0 +1,11 @@
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$mipmap$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$styleable$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$id$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$id$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$integer$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\ui\fragment\StepMainFragment$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$layout$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$style$override.class
+CHANGED,G:\AndroidStudioProjects\RunRunLuo\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\runrunluo\runrunluo\R$string$override.class
