@@ -3,7 +3,6 @@ package com.runrunluo.runrunluo.ui;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,8 +27,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ImageView main_bottom_step_iv;
     private LinearLayout main_bottom_setting_view;
     private ImageView main_bottom_setting_iv;
-
-    private AnimationDrawable mAnimation;
 
     private static final String FUNCTION_FRAGMENT = "FUNCTION_FRAGMENT";
     private static final String STEPMAIN_FRAGMENT = "STEPMAIN_FRAGMENT";
@@ -137,7 +134,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             transaction.hide(mMyCenterFragment);
         }
     }
-
 
     @Override
     public void onClick(View v) {
