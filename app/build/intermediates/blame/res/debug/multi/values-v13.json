@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\values-v13\\values-v13.xml",
+        "outputFile": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\build\\intermediates\\res\\merged\\debug\\values-v13\\values-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-v13\\values-v13.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 58,
-                        "endOffset": 109
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\values-v13\\values-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-v13\\values-v13.xml",
+                    "file": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-v13\\values-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

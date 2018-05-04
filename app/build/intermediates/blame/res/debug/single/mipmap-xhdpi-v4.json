@@ -1,10 +1,6 @@
 [
     {
-        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "G:\\GithubProjects\\RunRunLuo\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }
 ]

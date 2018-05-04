@@ -1,88 +1,88 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:2:1-32:12
-	xmlns:android
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:2:11-69
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:3:5-38
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WAKE_LOCK
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:6:5-68
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:6:22-65
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:6:22-65
 application
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:8:5-30:19
-MERGED from [com.android.support:appcompat-v7:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
-	android:supportsRtl
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:12:9-35
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:8:5-30:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:11:9-41
+	android:supportsRtl
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:12:9-35
 	android:allowBackup
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:13:9-40
-activity#com.runrunluo.runrunluo.ui.SplashActivity
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:9-21:20
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:13:9-40
+activity#com.toperc.lifetools.ui.SplashActivity
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:screenOrientation
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:53-89
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:15:73-109
 	android:theme
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:90-126
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:15:110-146
 	android:name
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:15:19-52
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:15:19-72
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:19:27-74
-activity#com.runrunluo.runrunluo.ui.MainActivity
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:9-84
-	android:name
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:19-50
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:19:27-74
+activity#com.toperc.lifetools.ui.MainActivity
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:23:9-104
 	android:launchMode
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:23:51-82
-service#com.runrunluo.runrunluo.widget.stepdetector.StepCounterService
-ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:25:9-28:39
-	android:priority
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:28:13-36
-	android:exported
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:27:13-37
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:23:71-102
 	android:name
-		ADDED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml:26:13-67
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:23:19-70
+service#com.toperc.lifetools.widget.stepdetector.StepCounterService
+ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:25:9-28:39
+	android:exported
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:27:13-37
+	android:priority
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml:26:13-87
 uses-sdk
-INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
-MERGED from [com.jakewharton:butterknife:8.0.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.0.0\AndroidManifest.xml:5:5-43
-	android:targetSdkVersion
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
-		INJECTED from G:\GithubProjects\RunRunLuo\app\src\main\AndroidManifest.xml
+INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.jakewharton:butterknife:8.0.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.0.0\AndroidManifest.xml:5:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.3.0] G:\GithubProjects\RunRunLuo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:23.3.0] G:\workspace\project_android\project_github\LifeTools\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml
+		INJECTED from G:\workspace\project_android\project_github\LifeTools\app\src\main\AndroidManifest.xml

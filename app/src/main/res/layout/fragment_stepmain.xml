@@ -88,7 +88,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp">
 
-                    <com.runrunluo.runrunluo.widget.ArcProgressView
+                    <com.toperc.lifetools.widget.ArcProgressView
                         android:id="@+id/arc_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

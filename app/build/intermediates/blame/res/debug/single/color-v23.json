@@ -1,10 +1,6 @@
 [
     {
-        "merged": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color-v23\\abc_color_highlight_material.xml"
+        "merged": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
+        "source": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\color-v23\\abc_color_highlight_material.xml"
     }
 ]

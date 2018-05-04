@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
+        "outputFile": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,31 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "G:\\AndroidStudioProjects\\RunRunLuo\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 295,
-                        "endColumn": 57,
-                        "endOffset": 348
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "G:\\GithubProjects\\RunRunLuo\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "G:\\GithubProjects\\RunRunLuo\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "G:\\workspace\\project_android\\project_github\\LifeTools\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

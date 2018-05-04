@@ -1,0 +1,29 @@
+# Built application files
+*.apk
+*.ap_
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log Files
+*.log
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# IntelliJ
+*.iml
+.idea/workspace.xml
+
+# macOS
+.DS_Store
+
+
+.gradle/
+/build

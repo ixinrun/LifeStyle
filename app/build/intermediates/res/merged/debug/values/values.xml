@@ -43,6 +43,7 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <color name="line_color">#9b9b9b</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -73,6 +74,10 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="text_color_highblack">#444444</color>
+    <color name="text_color_hintblack">#c7c7cc</color>
+    <color name="text_color_mediumblack">#666666</color>
+    <color name="text_color_tintblack">#9b9b9b</color>
     <color name="textcolorprimary">#ffffff</color>
     <color name="trans_color">#00000000</color>
     <color name="view_deepen">#50ffffff</color>
