@@ -1,4 +1,4 @@
-package com.toperc.lifetools.ui;
+package com.toperc.lifestyle.ui;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -8,11 +8,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.toperc.lifetools.R;
-import com.toperc.lifetools.base.BaseActivity;
-import com.toperc.lifetools.ui.fragment.FunctionsFragment;
-import com.toperc.lifetools.ui.fragment.StepMainFragment;
-import com.toperc.lifetools.ui.fragment.MyCenterFragment;
+import com.toperc.lifestyle.R;
+import com.toperc.lifestyle.base.BaseActivity;
+import com.toperc.lifestyle.ui.fragment.FunctionsFragment;
+import com.toperc.lifestyle.ui.fragment.StepMainFragment;
+import com.toperc.lifestyle.ui.fragment.MyCenterFragment;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         hideFragments(transaction);
         switch (index){
             case 0:
-                main_bottom_function_iv.setBackgroundResource(R.mipmap.main_bottom_function_b);
+                main_bottom_function_iv.setBackgroundResource(R.drawable.main_bottom_function_b);
                 if (mFunctionsFragment != null){
                     transaction.show(mFunctionsFragment);
                 }else {
@@ -93,7 +93,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 }
                 break;
             case 1:
-                main_bottom_step_iv.setBackgroundResource(R.mipmap.main_bottom_step_b);
+                main_bottom_step_iv.setBackgroundResource(R.drawable.main_bottom_step_b);
                 if (mStepMainFragment != null){
                     transaction.show(mStepMainFragment);
                 }else{
@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 }
                 break;
             case 2:
-                main_bottom_setting_iv.setBackgroundResource(R.mipmap.main_bottom_mycenter_b);
+                main_bottom_setting_iv.setBackgroundResource(R.drawable.main_bottom_mycenter_b);
                 if (mMyCenterFragment != null){
                     transaction.show(mMyCenterFragment);
                 }else {
@@ -117,9 +117,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void cleanSelection() {
-        main_bottom_function_iv.setBackgroundResource(R.mipmap.main_bottom_function_a);
-        main_bottom_step_iv.setBackgroundResource(R.mipmap.main_bottom_step_a);
-        main_bottom_setting_iv.setBackgroundResource(R.mipmap.main_bottom_mycenter_a);
+        main_bottom_function_iv.setBackgroundResource(R.drawable.main_bottom_function_a);
+        main_bottom_step_iv.setBackgroundResource(R.drawable.main_bottom_step_a);
+        main_bottom_setting_iv.setBackgroundResource(R.drawable.main_bottom_mycenter_a);
     }
 
     private void hideFragments(FragmentTransaction transaction){

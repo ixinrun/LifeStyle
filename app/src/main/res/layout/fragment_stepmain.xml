@@ -28,7 +28,7 @@
                     android:layout_width="26dp"
                     android:layout_height="26dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@mipmap/running_icon0"
+                    android:background="@drawable/running_icon0"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     />
@@ -45,7 +45,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:background="@mipmap/data_left_a"
+                        android:background="@drawable/data_left_a"
                         />
 
                     <TextView
@@ -59,7 +59,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:background="@mipmap/data_right_a"
+                        android:background="@drawable/data_right_a"
                         />
 
                 </LinearLayout>
@@ -68,7 +68,7 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_marginRight="10dp"
-                    android:background="@mipmap/share_icon"
+                    android:background="@drawable/share_icon"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     />
@@ -88,7 +88,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp">
 
-                    <com.toperc.lifetools.widget.ArcProgressView
+                    <com.toperc.lifestyle.widget.ArcProgressView
                         android:id="@+id/arc_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-package com.toperc.lifetools;
+package com.toperc.lifestyle;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

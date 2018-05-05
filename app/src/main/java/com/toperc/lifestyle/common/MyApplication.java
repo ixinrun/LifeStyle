@@ -1,4 +1,4 @@
-package com.toperc.lifetools.common;
+package com.toperc.lifestyle.common;
 
 import android.app.Application;
 

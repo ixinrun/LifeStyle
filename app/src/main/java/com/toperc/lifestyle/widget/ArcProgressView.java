@@ -1,4 +1,4 @@
-package com.toperc.lifetools.widget;
+package com.toperc.lifestyle.widget;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -12,8 +12,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-import com.toperc.lifetools.R;
-import com.toperc.lifetools.util.DensityUtil;
+import com.toperc.lifestyle.R;
+import com.toperc.lifestyle.util.DensityUtil;
 
 /**
  * Created by BigRun on 2016/5/5.

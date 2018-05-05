@@ -1,4 +1,4 @@
-package com.toperc.lifetools.util;
+package com.toperc.lifestyle.util;
 
 import android.content.Context;
 

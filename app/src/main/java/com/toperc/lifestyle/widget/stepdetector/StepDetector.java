@@ -1,4 +1,4 @@
-package com.toperc.lifetools.widget.stepdetector;
+package com.toperc.lifestyle.widget.stepdetector;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -6,8 +6,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-import com.toperc.lifetools.common.Constents;
-import com.toperc.lifetools.util.SharePreferencesUtil;
+import com.toperc.lifestyle.common.Constents;
+import com.toperc.lifestyle.util.SharePreferencesUtil;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;

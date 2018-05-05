@@ -1,4 +1,4 @@
-package com.toperc.lifetools;
+package com.toperc.lifestyle;
 
 import org.junit.Test;
 

@@ -1,13 +1,13 @@
-package com.toperc.lifetools.ui;
+package com.toperc.lifestyle.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
-import com.toperc.lifetools.R;
-import com.toperc.lifetools.base.BaseActivity;
-import com.toperc.lifetools.widget.stepdetector.StepCounterService;
+import com.toperc.lifestyle.R;
+import com.toperc.lifestyle.base.BaseActivity;
+import com.toperc.lifestyle.widget.stepdetector.StepCounterService;
 
 /**
  * Created by BigRun on 2016/9/1.

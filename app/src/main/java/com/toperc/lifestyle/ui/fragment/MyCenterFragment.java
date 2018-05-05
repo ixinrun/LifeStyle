@@ -1,4 +1,4 @@
-package com.toperc.lifetools.ui.fragment;
+package com.toperc.lifestyle.ui.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.toperc.lifetools.R;
+import com.toperc.lifestyle.R;
 
 /**
  * Created by BigRun on 2016/9/2.

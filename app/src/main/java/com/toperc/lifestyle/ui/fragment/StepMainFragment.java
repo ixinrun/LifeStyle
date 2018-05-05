@@ -1,4 +1,4 @@
-package com.toperc.lifetools.ui.fragment;
+package com.toperc.lifestyle.ui.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.toperc.lifetools.R;
-import com.toperc.lifetools.widget.ArcProgressView;
-import com.toperc.lifetools.widget.stepdetector.IStepChangedListener;
-import com.toperc.lifetools.widget.stepdetector.StepCounterService;
-import com.toperc.lifetools.widget.stepdetector.StepDetector;
+import com.toperc.lifestyle.R;
+import com.toperc.lifestyle.widget.ArcProgressView;
+import com.toperc.lifestyle.widget.stepdetector.IStepChangedListener;
+import com.toperc.lifestyle.widget.stepdetector.StepCounterService;
+import com.toperc.lifestyle.widget.stepdetector.StepDetector;
 
 /**
  * Created by BigRun on 2016/9/2.

@@ -3,9 +3,9 @@
     android:oneshot="false" >  <!--oneshot:控制是否循环播放动画-->
 
     <item
-        android:drawable="@mipmap/running_icon0"
+        android:drawable="@drawable/running_icon0"
         android:duration="150"/> <!--duration:每一帧持续的时间-->
     <item
-        android:drawable="@mipmap/running_icon1"
+        android:drawable="@drawable/running_icon1"
         android:duration="150"/>
 </animation-list>

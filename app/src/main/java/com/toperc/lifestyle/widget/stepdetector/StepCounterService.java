@@ -1,4 +1,4 @@
-package com.toperc.lifetools.widget.stepdetector;
+package com.toperc.lifestyle.widget.stepdetector;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -13,10 +13,10 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
 
-import com.toperc.lifetools.R;
-import com.toperc.lifetools.common.Constents;
-import com.toperc.lifetools.ui.MainActivity;
-import com.toperc.lifetools.util.SharePreferencesUtil;
+import com.toperc.lifestyle.R;
+import com.toperc.lifestyle.common.Constents;
+import com.toperc.lifestyle.ui.MainActivity;
+import com.toperc.lifestyle.util.SharePreferencesUtil;
 
 
 public class StepCounterService extends Service{

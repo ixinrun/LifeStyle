@@ -31,7 +31,7 @@
                 android:id="@+id/main_bottom_function_iv"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@mipmap/main_bottom_function_a" />
+                android:background="@drawable/main_bottom_function_a" />
 
         </LinearLayout>
 
@@ -48,7 +48,7 @@
                 android:id="@+id/main_bottom_step_iv"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@mipmap/main_bottom_step_b" />
+                android:background="@drawable/main_bottom_step_b" />
         </LinearLayout>
 
 
@@ -63,7 +63,7 @@
                 android:id="@+id/main_bottom_setting_iv"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:background="@mipmap/main_bottom_mycenter_a" />
+                android:background="@drawable/main_bottom_mycenter_a" />
 
         </LinearLayout>
 

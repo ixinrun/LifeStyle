@@ -1,4 +1,4 @@
-package com.toperc.lifetools.base;
+package com.toperc.lifestyle.base;
 
 import android.app.Activity;
 import android.os.Bundle;
