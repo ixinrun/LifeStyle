@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         initView();
 
-        if (savedInstanceState!=null){
+        if (savedInstanceState != null) {
             //通过ID或者TAG找到“复活”的fragment
             mFunctionsFragment = (FunctionsFragment) fragmentManager.findFragmentByTag(FUNCTION_FRAGMENT);
             mStepMainFragment = (StepMainFragment) fragmentManager.findFragmentByTag(STEPMAIN_FRAGMENT);
@@ -51,7 +51,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             int index = (int) savedInstanceState.get(SAVEINSTANCESTATE);
             //恢复Fragment
             setSelectionTab(index);
-        }else {
+        } else {
             setSelectionTab(1);
         }
     }
@@ -59,7 +59,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        int index = intent.getIntExtra(SELECT_TAB,1);
+        int index = intent.getIntExtra(SELECT_TAB, 1);
         setSelectionTab(index);
     }
 
@@ -77,37 +77,37 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         fragmentManager = getFragmentManager();
     }
 
-    private void setSelectionTab(int index){
+    private void setSelectionTab(int index) {
         cleanSelection();
         //拿到Fragment的事务
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         hideFragments(transaction);
-        switch (index){
+        switch (index) {
             case 0:
                 main_bottom_function_iv.setBackgroundResource(R.drawable.main_bottom_function_b);
-                if (mFunctionsFragment != null){
+                if (mFunctionsFragment != null) {
                     transaction.show(mFunctionsFragment);
-                }else {
+                } else {
                     mFunctionsFragment = new FunctionsFragment();
-                    transaction.add(R.id.main_container_view,mFunctionsFragment,FUNCTION_FRAGMENT);
+                    transaction.add(R.id.main_container_view, mFunctionsFragment, FUNCTION_FRAGMENT);
                 }
                 break;
             case 1:
                 main_bottom_step_iv.setBackgroundResource(R.drawable.main_bottom_step_b);
-                if (mStepMainFragment != null){
+                if (mStepMainFragment != null) {
                     transaction.show(mStepMainFragment);
-                }else{
+                } else {
                     mStepMainFragment = new StepMainFragment();
-                    transaction.add(R.id.main_container_view,mStepMainFragment,STEPMAIN_FRAGMENT);
+                    transaction.add(R.id.main_container_view, mStepMainFragment, STEPMAIN_FRAGMENT);
                 }
                 break;
             case 2:
                 main_bottom_setting_iv.setBackgroundResource(R.drawable.main_bottom_mycenter_b);
-                if (mMyCenterFragment != null){
+                if (mMyCenterFragment != null) {
                     transaction.show(mMyCenterFragment);
-                }else {
+                } else {
                     mMyCenterFragment = new MyCenterFragment();
-                    transaction.add(R.id.main_container_view, mMyCenterFragment,STEPSETTING_FRAGMENT);
+                    transaction.add(R.id.main_container_view, mMyCenterFragment, STEPSETTING_FRAGMENT);
                 }
                 break;
         }
@@ -122,21 +122,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         main_bottom_setting_iv.setBackgroundResource(R.drawable.main_bottom_mycenter_a);
     }
 
-    private void hideFragments(FragmentTransaction transaction){
-        if (mFunctionsFragment != null){
+    private void hideFragments(FragmentTransaction transaction) {
+        if (mFunctionsFragment != null) {
             transaction.hide(mFunctionsFragment);
         }
-        if (mStepMainFragment != null){
+        if (mStepMainFragment != null) {
             transaction.hide(mStepMainFragment);
         }
-        if (mMyCenterFragment != null){
+        if (mMyCenterFragment != null) {
             transaction.hide(mMyCenterFragment);
         }
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.main_bottom_function_view:
                 setSelectionTab(0);
                 break;
@@ -151,7 +151,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putInt(SAVEINSTANCESTATE,mSaveIndex);
+        outState.putInt(SAVEINSTANCESTATE, mSaveIndex);
         super.onSaveInstanceState(outState);
     }
 }
