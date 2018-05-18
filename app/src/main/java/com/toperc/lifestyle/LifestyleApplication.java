@@ -32,8 +32,9 @@ public class LifestyleApplication extends Application {
         final float DESIGN_WIDTH = 1080f;
         final float DESIGN_HEIGHT = 1920f;
         final float DESTGN_INCH = 4.91f;
-
+        //获取参考密度值
         float referenceDensity = (float) Math.sqrt(DESIGN_WIDTH * DESIGN_WIDTH + DESIGN_HEIGHT * DESIGN_HEIGHT) / DESTGN_INCH / 160;
+        //获取放大缩小比率
         DisplayMetrics dm = getResources().getDisplayMetrics();
         float rate = 1f;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
@@ -41,6 +42,7 @@ public class LifestyleApplication extends Application {
         } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             rate = dm.widthPixels / DESIGN_HEIGHT;
         }
+        //重置系统密度值
         dm.density = referenceDensity * rate;
     }
 }
