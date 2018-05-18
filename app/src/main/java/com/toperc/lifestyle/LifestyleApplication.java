@@ -10,36 +10,37 @@ import android.util.DisplayMetrics;
 
 public class LifestyleApplication extends Application {
 
-    //绘制页面时参照的设计图尺寸
-    public final static float DESIGN_WIDTH = 1080;
-    public final static float DESIGN_HEIGHT = 1920;
-
     @Override
     public void onCreate() {
         super.onCreate();
-        resetDensity(DESIGN_WIDTH);
+        resetDensity(Configuration.ORIENTATION_PORTRAIT);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        int ori = newConfig.orientation;
-        if (ori == newConfig.ORIENTATION_PORTRAIT) {
-            //竖屏时重置
-            resetDensity(DESIGN_WIDTH);
-        } else if (ori == newConfig.ORIENTATION_LANDSCAPE) {
-            //横屏时重置
-            resetDensity(DESIGN_HEIGHT);
-        }
+        resetDensity(newConfig.orientation);
     }
 
     /**
      * 重置屏幕密度
      *
-     * @param width 设计图宽度
+     * @param orientation
      */
-    public void resetDensity(float width) {
+    private void resetDensity(int orientation) {
+        //绘制页面时参照的设计图尺寸
+        final float DESIGN_WIDTH = 1080f;
+        final float DESIGN_HEIGHT = 1920f;
+        final float DESTGN_INCH = 4.91f;
+
+        float referenceDensity = (float) Math.sqrt(DESIGN_WIDTH * DESIGN_WIDTH + DESIGN_HEIGHT * DESIGN_HEIGHT) / DESTGN_INCH / 160;
         DisplayMetrics dm = getResources().getDisplayMetrics();
-        dm.density = dm.widthPixels / width * dm.density;
+        float rate = 1f;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            rate = dm.widthPixels / DESIGN_WIDTH;
+        } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            rate = dm.widthPixels / DESIGN_HEIGHT;
+        }
+        dm.density = referenceDensity * rate;
     }
 }
