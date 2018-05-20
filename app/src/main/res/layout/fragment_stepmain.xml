@@ -53,7 +53,7 @@
                         android:layout_height="wrap_content"
                         android:text="10月30日"
                         android:textColor="@color/textcolorprimary"
-                        android:textSize="14sp"
+                        android:textSize="14dp"
                         />
 
                     <ImageView
@@ -116,7 +116,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="今日步数"
                                 android:textColor="@color/textcolorprimary"
-                                android:textSize="14sp" />
+                                android:textSize="14dp" />
 
                             <TextView
                                 android:id="@+id/step_count"
@@ -125,7 +125,7 @@
                                 android:layout_marginTop="5dp"
                                 android:text="50000"
                                 android:textColor="#f6f4cd"
-                                android:textSize="36sp" />
+                                android:textSize="36dp" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="86千卡"
                                     android:textColor="@color/textcolorprimary"
-                                    android:textSize="12sp"
+                                    android:textSize="12dp"
                                     />
 
                                 <View
@@ -154,7 +154,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="500米"
                                     android:textColor="@color/textcolorprimary"
-                                    android:textSize="12sp" />
+                                    android:textSize="12dp" />
 
                             </LinearLayout>
 
@@ -165,7 +165,7 @@
                             android:layout_height="wrap_content"
                             android:text="目标：10000步"
                             android:textColor="@color/textcolorprimary"
-                            android:textSize="12sp"
+                            android:textSize="12dp"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
                             android:layout_marginBottom="24dp"

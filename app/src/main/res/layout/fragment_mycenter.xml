@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="小敬"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 android:textColor="@color/textcolorprimary"
                 android:layout_above="@+id/my_photo"
                 android:layout_marginBottom="10dp"
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:text="日均步数"
                     android:textColor="@color/text_color_tintblack"
-                    android:textSize="12sp"
+                    android:textSize="12dp"
                     />
 
                 <TextView
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="6871"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textColor="@color/text_color_highblack"
                     android:textStyle="bold"
                     />
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:text="总公里数"
                     android:textColor="@color/text_color_tintblack"
-                    android:textSize="12sp"
+                    android:textSize="12dp"
                     />
 
                 <TextView
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="6871"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textColor="@color/text_color_highblack"
                     android:textStyle="bold"
                     />
@@ -132,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:text="达标天数"
                     android:textColor="@color/text_color_tintblack"
-                    android:textSize="12sp"
+                    android:textSize="12dp"
                     />
 
                 <TextView
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="6871"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textColor="@color/text_color_highblack"
                     android:textStyle="bold"
                     />
