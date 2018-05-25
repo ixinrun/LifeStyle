@@ -2,18 +2,26 @@ package com.toperc.lifestyle;
 
 import android.app.Application;
 import android.content.res.Configuration;
+import android.support.multidex.MultiDexApplication;
 import android.util.DisplayMetrics;
 
 /**
  * Created by HelloXinrun on 2018/5/7.
  */
 
-public class LifestyleApplication extends Application {
+public class LifestyleApplication extends MultiDexApplication {
+
+    private static LifestyleApplication instance;
+
+    public static LifestyleApplication getInstance() {
+        return instance;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
         resetDensity();
+        instance = this;
     }
 
     @Override

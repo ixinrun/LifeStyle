@@ -1,4 +1,4 @@
-package com.toperc.lifestyle.network.config;
+package com.toperc.lifestyle.https.config;
 
 /**
  * @author HelloXinrun

@@ -1,9 +1,13 @@
-package com.toperc.lifestyle.network;
+package com.toperc.lifestyle.https;
 
+import android.content.Context;
 import android.util.Log;
 
-import com.toperc.lifestyle.network.exception.ApiException;
-import com.toperc.lifestyle.network.exception.TokenExpiredException;
+import com.toperc.lifestyle.LifestyleApplication;
+import com.toperc.lifestyle.R;
+import com.toperc.lifestyle.https.exception.ApiException;
+import com.toperc.lifestyle.https.exception.TokenExpiredException;
+import com.toperc.lifestyle.util.NetworkUtil;
 
 import java.io.IOException;
 
@@ -19,6 +23,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  */
 public class InterceptorUtil {
     public static String TAG = "----";
+    public static Context mContext = LifestyleApplication.getInstance().getApplicationContext();
 
     //日志拦截器
     public static HttpLoggingInterceptor logInterceptor() {
@@ -44,7 +49,7 @@ public class InterceptorUtil {
     }
 
     //头部获取拦截器
-    public static Interceptor headeretGettingInterceptor(){
+    public static Interceptor headeretGettingInterceptor() {
         return new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
@@ -54,26 +59,26 @@ public class InterceptorUtil {
     }
 
     //错误信息拦截器
-    public static Interceptor requestErrorInterceptor(){
+    public static Interceptor requestErrorInterceptor() {
         return new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
-                if (!NetworkUtil.isConnected(context)) {
-                    throw new ApiException(0, context.getString(R.string.newwork_err));
+                if (!NetworkUtil.isConnected(mContext)) {
+                    throw new ApiException(0, mContext.getString(R.string.newwork_err));
                 }
                 Request request = chain.request();
                 Response response = chain.proceed(request);
                 ApiException e = null;
                 if (401 == response.code()) {
-                    throw new TokenExpiredException(401, context.getString(R.string.newwork_request_err_401));
+                    throw new TokenExpiredException(401, mContext.getString(R.string.newwork_request_err_401));
                 } else if (403 == response.code()) {
-                    e = new ApiException(403, context.getString(R.string.newwork_request_err_403));
+                    e = new ApiException(403, mContext.getString(R.string.newwork_request_err_403));
                 } else if (503 == response.code()) {
-                    e = new ApiException(503, context.getString(R.string.newwork_request_err_503));
+                    e = new ApiException(503, mContext.getString(R.string.newwork_request_err_503));
                 } else if (500 == response.code()) {
-                    e = new ApiException(500, context.getString(R.string.newwork_request_err_500));
+                    e = new ApiException(500, mContext.getString(R.string.newwork_request_err_500));
                 } else if (404 == response.code()) {
-                    e = new ApiException(404, context.getString(R.string.newwork_request_err_404));
+                    e = new ApiException(404, mContext.getString(R.string.newwork_request_err_404));
                 }
                 if (e != null) {
                     throw e;

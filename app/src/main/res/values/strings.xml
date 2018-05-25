@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Lifestyle</string>
+
+    <!--更新-->
+    <string name="update_downloading">正在下载</string>
+    <string name="update_download">立即升级</string>
+    <string name="update_cancel">稍后升级</string>
+    <string name="update_lab">发现新版本啦</string>
+    <string name="update_version_lab">%s 版本特征</string>
+    <string name="download_failure">下载失败</string>
+
+    <!--网络-->
+    <string name="newwork_err">网络未连接!</string>
+    <string name="newwork_request_err_401">登录已过期,请重新登录!</string>
+    <string name="newwork_request_err_403">禁止访问!</string>
+    <string name="newwork_request_err_404">链接错误</string>
+    <string name="newwork_request_err_500">服务器内部错误!</string>
+    <string name="newwork_request_err_503">服务器升级中!</string>
+    <string name="newwork_err_null">获取的数据为空</string>
+    <string name="newwork_err_json">数据解析异常</string>
+    <string name="newwork_err_cast">类型转换失败</string>
+
+    <!--权限-->
+    <string name="notify_msg">当前应用缺少必要权限。\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="permission_title">权限设置</string>
+    <string name="permission_photo">当前应用缺少必要权限。\n请点击\"设置\"-\"权限\"-打开相机、读写文件权限。</string>
+    <string name="permission_location">当前应用缺少必要权限。\n请点击\"设置\"-\"权限\"-打开定位权限。</string>
+    <string name="permission_req_location">请允许打开位置权限</string>
+    <string name="permission_ok">去设置</string>
+    <string name="permission_cancel">取消</string>
+    <string name="setting">设置</string>
+
 </resources>

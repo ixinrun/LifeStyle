@@ -10,6 +10,8 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true
     }
 
     signingConfigs {
@@ -56,6 +58,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:multidex:1.0.3'
 
     compile 'com.squareup.okhttp3:okhttp:3.10.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.10.0'

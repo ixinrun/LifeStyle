@@ -1,9 +1,6 @@
-package com.toperc.lifestyle.network;
+package com.toperc.lifestyle.https;
 
-import android.content.Context;
-
-import com.google.gson.Gson;
-import com.toperc.lifestyle.network.config.HttpConfig;
+import com.toperc.lifestyle.https.config.HttpConfig;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,16 +15,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * @description 网络请求引擎
  */
 public class RetrofitFactory {
-
-    private static Context context;
-    private static String baseUrl;
-
-    private static Gson gson = GsonUtil.getGsonInstance(false);
-
-    public static void init(Context context, String baseUrl) {
-        RetrofitFactory.context = context;
-        RetrofitFactory.baseUrl = baseUrl;
-    }
 
     private static RetrofitFactory mRetrofitFactory;
     private Retrofit mRetrofit;

@@ -1,4 +1,4 @@
-package com.toperc.lifestyle.network.exception;
+package com.toperc.lifestyle.https.exception;
 
 import java.io.IOException;
 
