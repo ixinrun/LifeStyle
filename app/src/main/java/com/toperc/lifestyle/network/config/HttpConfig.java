@@ -11,5 +11,4 @@ public class HttpConfig {
    public static final int HTTP_WRITE_TIME = 60;
 
 
-
 }

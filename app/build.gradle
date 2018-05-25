@@ -11,10 +11,42 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    signingConfigs {
+        config {
+            storeFile file(String.valueOf(System.getenv('storeFile')))
+            storePassword String.valueOf(System.getenv('storePassword'))
+            keyAlias String.valueOf(System.getenv('keyAlias'))
+            keyPassword String.valueOf(System.getenv('keyPassword'))
+            v2SigningEnabled false
+        }
+    }
+
     buildTypes {
-        release {
+        debug {
+            buildConfigField "boolean", "IS_DEBUG", "true"
+            //测试服务器
+            buildConfigField "String", "SERVER_URL", "\"http://192.168.0.1:8080\""
             minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        release {
+            //是否为debug模式
+            buildConfigField "boolean", "IS_DEBUG", "false"
+            //正式服务器地址
+            buildConfigField "String", "SERVER_URL", "\"http://192.168.0.1:8080\""
+            //混淆
+            minifyEnabled true
+            //内存对齐
+            zipAlignEnabled true
+            //移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.config
         }
     }
 }
