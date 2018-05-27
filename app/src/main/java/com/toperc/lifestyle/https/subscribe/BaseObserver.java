@@ -1,4 +1,4 @@
-package com.toperc.lifestyle.https.base;
+package com.toperc.lifestyle.https.subscribe;
 
 import android.accounts.NetworkErrorException;
 import android.content.Context;
@@ -15,7 +15,7 @@ import io.reactivex.disposables.Disposable;
  * @date 2018/5/25
  * @description
  */
-public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
+public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
     protected Context mContext;
 
     public BaseObserver(Context cxt) {
@@ -29,11 +29,10 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
     @Override
     public void onSubscribe(Disposable d) {
         onRequestStart();
-
     }
 
     @Override
-    public void onNext(BaseEntity<T> tBaseEntity) {
+    public void onNext(BaseResponse<T> tBaseEntity) {
         onRequestEnd();
         if (tBaseEntity.isSuccess()) {
             try {
@@ -52,7 +51,7 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
 
     @Override
     public void onError(Throwable e) {
-//        Log.w(TAG, "onError: ", );这里可以打印错误信息
+        //Log.w(TAG, "onError: ", );这里可以打印错误信息
         onRequestEnd();
         try {
             if (e instanceof ConnectException
@@ -78,7 +77,7 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
      * @param t
      * @throws Exception
      */
-    protected abstract void onSuccees(BaseEntity<T> t) throws Exception;
+    protected abstract void onSuccees(BaseResponse<T> t) throws Exception;
 
     /**
      * 返回成功了,但是code错误
@@ -86,7 +85,7 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
      * @param t
      * @throws Exception
      */
-    protected void onCodeError(BaseEntity<T> t) throws Exception {
+    protected void onCodeError(BaseResponse<T> t) throws Exception {
     }
 
     /**
@@ -98,9 +97,16 @@ public abstract class BaseObserver<T> implements Observer<BaseEntity<T>> {
      */
     protected abstract void onFailure(Throwable e, boolean isNetWorkError) throws Exception;
 
+    /**
+     * 开始请求
+     */
     protected void onRequestStart() {
+
     }
 
+    /**
+     * 请求结束
+     */
     protected void onRequestEnd() {
         closeProgressDialog();
     }

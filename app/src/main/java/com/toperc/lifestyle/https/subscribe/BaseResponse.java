@@ -1,16 +1,17 @@
-package com.toperc.lifestyle.https.base;
+package com.toperc.lifestyle.https.subscribe;
 
 /**
  * @author HelloXinrun
  * @date 2018/5/25
  * @description
  */
-public class BaseEntity<T> {
+public class BaseResponse<T> {
     private static final int SUCCESS_CODE = 0;
     private int code;
     private String msg;
     private T data;
-
+    private int total;
+    private boolean more;
 
     public boolean isSuccess() {
         return getCode() == SUCCESS_CODE;
@@ -38,6 +39,22 @@ public class BaseEntity<T> {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public boolean isMore() {
+        return more;
+    }
+
+    public void setMore(boolean more) {
+        this.more = more;
     }
 }
 
