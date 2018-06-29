@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.toperc.keepalive">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <activity android:name=".local.OnePixelScreenActivity" />
+
+        <receiver android:name=".local.SystemReceiver">
+            <!--设备重启广播-->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--安装或卸载广播-->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!--解锁广播-->
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_USER_PRESENT" />
+            </intent-filter>
+            <!--存储卡挂载广播-->
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+            <!--网络状态广播-->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".local.SilentMusicService"
+            android:exported="false"
+            android:priority="1000" />
+
+        <service
+            android:name=".KeepAliveService"
+            android:enabled="true"
+            android:exported="true"
+            android:priority="990" />
+
+        <service
+            android:name=".remote.DaemonAService"
+            android:enabled="true"
+            android:exported="true"
+            android:priority="1000"
+            android:process=":daemona" />
+
+        <service
+            android:name=".remote.DaemonBService"
+            android:enabled="true"
+            android:exported="true"
+            android:priority="995"
+            android:process=":daemonb" />
+
+    </application>
+
+</manifest>
