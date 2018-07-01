@@ -17,7 +17,7 @@ import android.view.WindowManager;
 /**
  * 功能描述:
  * </p>
- * 创建人: luoxinrun
+ * 创建人: Toper-C
  * 创建时间: 2018/6/28
  */
 public class OnePixelScreenActivity extends Activity {

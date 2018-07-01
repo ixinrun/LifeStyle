@@ -1,32 +1,41 @@
 package com.toperc.keepalive;
 
-import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.graphics.BitmapFactory;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.toperc.keepalive.local.OnePixelScreenActivity;
+import com.toperc.keepalive.remote.DaemonService;
 
 /**
  * 功能描述:
  * </p>
- * 创建人: luoxinrun
+ * 创建人: Toper-C
  * 创建时间: 2018/6/29
  */
 public class KeepAliveService extends Service {
+    private DaemonServiceConnection mDaemonServiceConnection;
 
     @Override
     public void onCreate() {
         super.onCreate();
         startForegroundNotification();
         registerOnePixelScreenReceiver();
+        mDaemonServiceConnection = new DaemonServiceConnection();
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("com.toperc.lifestyle","com.toperc.lifestyle.remote.DaemonService"));
+        bindService(intent, mDaemonServiceConnection, Context.BIND_AUTO_CREATE);
     }
 
     @Nullable
@@ -35,11 +44,9 @@ public class KeepAliveService extends Service {
         return null;
     }
 
-    @SuppressLint("WrongConstant")
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        flags = START_STICKY;
-        return super.onStartCommand(intent, flags, startId);
+        return START_STICKY;
     }
 
     /**
@@ -101,6 +108,28 @@ public class KeepAliveService extends Service {
 
         // 启动前台服务, 参数一：唯一的通知标识；参数二：通知消息。
         startForeground(100, notification);
+    }
+
+    class DaemonServiceConnection implements ServiceConnection {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.e("TAG", "+++++++++++++++DaemonService is aliving.");
+            IDaemonAidlInterface iDaemonAidlInterface = IDaemonAidlInterface.Stub.asInterface(service);
+            try {
+                Log.e("TAG", "+++++++++++++++DaemonService is aliving."+iDaemonAidlInterface.getServiceName());
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Log.e("TAG", "+++++++++++++++DaemonService is onServiceDisconnected.");
+            //开启远程服务
+            startService(new Intent(KeepAliveService.this, DaemonService.class));
+            //绑定远程服务
+            bindService(new Intent(KeepAliveService.this, DaemonService.class), mDaemonServiceConnection, Context.BIND_AUTO_CREATE);
+        }
     }
 
     @Override

@@ -61,18 +61,11 @@
             android:priority="990" />
 
         <service
-            android:name=".remote.DaemonAService"
+            android:name=".remote.DaemonService"
             android:enabled="true"
             android:exported="true"
             android:priority="1000"
-            android:process=":daemona" />
-
-        <service
-            android:name=".remote.DaemonBService"
-            android:enabled="true"
-            android:exported="true"
-            android:priority="995"
-            android:process=":daemonb" />
+            android:process=":daemon" />
 
     </application>
 

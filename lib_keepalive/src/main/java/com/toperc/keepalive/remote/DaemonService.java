@@ -6,54 +6,44 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.toperc.keepalive.IDaemonAidlInterface;
 import com.toperc.keepalive.KeepAliveService;
 
 /**
  * 功能描述:
  * </p>
- * 创建人: luoxinrun
+ * 创建人: Toper-C
  * 创建时间: 2018/6/29
  */
-public class DaemonAService extends Service {
+public class DaemonService extends Service {
 
-    private DaemonBServiceConnection mDaemonBServiceConnection;
+    private DaemonAServiceBinder mDaemonAServiceBinder;
     private KeepAliveServiceConnection mKeepAliveServiceConnection;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mDaemonBServiceConnection = new DaemonBServiceConnection();
+        mDaemonAServiceBinder = new DaemonAServiceBinder();
         mKeepAliveServiceConnection = new KeepAliveServiceConnection();
+
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("com.toperc.lifestyle","com.toperc.lifestyle.KeepAliveService"));
+        bindService(intent, mKeepAliveServiceConnection, Context.BIND_AUTO_CREATE);
     }
 
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mDaemonAServiceBinder;
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         return super.onStartCommand(intent, flags, startId);
-    }
-
-    class DaemonBServiceConnection implements ServiceConnection {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.e("TAG", "+++++++++++++++DaemonBService is aliving.");
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            Log.e("TAG", "+++++++++++++++DaemonBService is dead.");
-            //开启远程服务
-            startService(new Intent(DaemonAService.this, DaemonBService.class));
-            //绑定远程服务
-            bindService(new Intent(DaemonAService.this, DaemonBService.class), mDaemonBServiceConnection, Context.BIND_AUTO_CREATE);
-        }
     }
 
     class KeepAliveServiceConnection implements ServiceConnection {
@@ -64,11 +54,21 @@ public class DaemonAService extends Service {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.e("TAG", "+++++++++++++++KeepAliveService is aliving.");
+            Log.e("TAG", "+++++++++++++++KeepAliveService is onServiceDisconnected.");
             //开启远程服务
-            startService(new Intent(DaemonAService.this, KeepAliveService.class));
+            startService(new Intent(DaemonService.this, KeepAliveService.class));
             //绑定远程服务
-            bindService(new Intent(DaemonAService.this, KeepAliveService.class), mKeepAliveServiceConnection, Context.BIND_AUTO_CREATE);
+            Intent intent = new Intent();
+            intent.setComponent(new ComponentName("com.toperc.keepalive","com.toperc.keepalive.KeepAliveService"));
+            bindService(intent, mKeepAliveServiceConnection, Context.BIND_AUTO_CREATE);
+        }
+    }
+
+    class DaemonAServiceBinder extends IDaemonAidlInterface.Stub{
+
+        @Override
+        public String getServiceName() throws RemoteException {
+            return DaemonService.class.getName();
         }
     }
 

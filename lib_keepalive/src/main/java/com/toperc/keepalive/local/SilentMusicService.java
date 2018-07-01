@@ -1,6 +1,5 @@
 package com.toperc.keepalive.local;
 
-import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -15,7 +14,7 @@ import com.toperc.keepalive.R;
 /**
  * 功能描述:
  * </p>
- * 创建人: luoxinrun
+ * 创建人: Toper-C
  * 创建时间: 2018/6/27
  */
 public class SilentMusicService extends Service implements MediaPlayer.OnCompletionListener {
@@ -40,11 +39,9 @@ public class SilentMusicService extends Service implements MediaPlayer.OnComplet
         return null;
     }
 
-    @SuppressLint("WrongConstant")
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        flags = START_STICKY;
-        return super.onStartCommand(intent, flags, startId);
+        return START_STICKY;
     }
 
     /**
