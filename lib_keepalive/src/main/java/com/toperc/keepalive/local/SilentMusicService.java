@@ -69,6 +69,22 @@ public class SilentMusicService extends Service implements MediaPlayer.OnComplet
     @Override
     public void onDestroy() {
         super.onDestroy();
+        mediaRelease();
         startService(new Intent(this, SilentMusicService.class));
     }
+
+    /**
+     * 释放播放器资源
+     */
+    private void mediaRelease() {
+        if (mediaPlayer != null) {
+            if (mediaPlayer.isPlaying()) {
+                mediaPlayer.stop();
+            }
+            mediaPlayer.reset();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
 }

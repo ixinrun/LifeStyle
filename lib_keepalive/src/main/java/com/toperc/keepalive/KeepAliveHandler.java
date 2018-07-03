@@ -1,9 +1,12 @@
 package com.toperc.keepalive;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
+import android.util.Log;
 
-import com.toperc.keepalive.local.SilentMusicService;
 import com.toperc.keepalive.remote.DaemonService;
 
 /**
@@ -14,6 +17,10 @@ import com.toperc.keepalive.remote.DaemonService;
  */
 public class KeepAliveHandler {
 
+    private Context mContext;
+    private KeepAliveServiceConnection mKeepAliveServiceConnection;
+    private DaemonServiceConnection mDaemonServiceConnection;
+
     private static KeepAliveHandler mInstance = new KeepAliveHandler();
 
     public static KeepAliveHandler getInstance() {
@@ -21,7 +28,48 @@ public class KeepAliveHandler {
     }
 
     public void init(Context context) {
-        context.startService(new Intent(context, KeepAliveService.class));
-        context.startService(new Intent(context, DaemonService.class));
+        this.mContext = context;
+        this.mKeepAliveServiceConnection = new KeepAliveServiceConnection();
+        this.mDaemonServiceConnection = new DaemonServiceConnection();
+        startKeepAliveService();
+        startDaemonService();
+    }
+
+    private void startKeepAliveService() {
+        Intent intent = new Intent(mContext, KeepAliveService.class);
+        mContext.startService(intent);
+        mContext.bindService(intent, mKeepAliveServiceConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    private void startDaemonService() {
+        Intent intent = new Intent(mContext, DaemonService.class);
+        mContext.startService(intent);
+        mContext.bindService(intent, mDaemonServiceConnection, Context.BIND_AUTO_CREATE);
+    }
+
+    class KeepAliveServiceConnection implements ServiceConnection {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.e("TAG", "+++++++++++++++KeepAliveServiceConnection is onServiceConnected.");
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Log.e("TAG", "+++++++++++++++KeepAliveServiceConnection is onServiceDisconnected.");
+            startKeepAliveService();
+        }
+    }
+
+    class DaemonServiceConnection implements ServiceConnection {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            Log.e("TAG", "+++++++++++++++DaemonServiceConnection is onServiceConnected.");
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            Log.e("TAG", "+++++++++++++++DaemonServiceConnection is onServiceDisconnected.");
+            startDaemonService();
+        }
     }
 }
