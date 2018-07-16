@@ -34,18 +34,14 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
     @Override
     public void onNext(BaseResponse<T> tBaseEntity) {
         onRequestEnd();
-        if (tBaseEntity.isSuccess()) {
-            try {
+        try {
+            if (tBaseEntity.isSuccess()) {
                 onSuccees(tBaseEntity);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            try {
+            } else {
                 onCodeError(tBaseEntity);
-            } catch (Exception e) {
-                e.printStackTrace();
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
