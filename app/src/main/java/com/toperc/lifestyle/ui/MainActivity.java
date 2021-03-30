@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import com.toperc.lifestyle.R;
 import com.toperc.lifestyle.base.BaseActivity;
 import com.toperc.lifestyle.ui.fragment.FunctionsFragment;
-import com.toperc.lifestyle.ui.fragment.StepMainFragment;
 import com.toperc.lifestyle.ui.fragment.MyCenterFragment;
+import com.toperc.lifestyle.ui.fragment.StepMainFragment;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -110,6 +110,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     transaction.add(R.id.main_container_view, mMyCenterFragment, STEPSETTING_FRAGMENT);
                 }
                 break;
+            default:
+                break;
         }
         //执行事务
         transaction.commit();
@@ -145,6 +147,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.main_bottom_setting_view:
                 setSelectionTab(2);
+                break;
+            default:
                 break;
         }
     }

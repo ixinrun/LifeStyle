@@ -50,12 +50,10 @@ public class KeepAliveHandler {
     class KeepAliveServiceConnection implements ServiceConnection {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.e("TAG", "+++++++++++++++KeepAliveServiceConnection is onServiceConnected.");
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.e("TAG", "+++++++++++++++KeepAliveServiceConnection is onServiceDisconnected.");
             startKeepAliveService();
         }
     }
@@ -63,12 +61,10 @@ public class KeepAliveHandler {
     class DaemonServiceConnection implements ServiceConnection {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.e("TAG", "+++++++++++++++DaemonServiceConnection is onServiceConnected.");
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.e("TAG", "+++++++++++++++DaemonServiceConnection is onServiceDisconnected.");
             startDaemonService();
         }
     }

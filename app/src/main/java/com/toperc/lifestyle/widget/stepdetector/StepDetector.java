@@ -25,10 +25,8 @@ public class StepDetector implements SensorEventListener {
     private static long end = 0;
     private static long start = 0;
 
-    /**
-     * 最后加速度方向
-     */
-    private float mLastDirections;  //最后的方向，相同还是相反。
+    //最后的方向，相同还是相反。
+    private float mLastDirections;
     private float mLastExtremes[] = new float[2];
     private float mLastDiff;
     private int mLastMatch = -1;
@@ -52,8 +50,10 @@ public class StepDetector implements SensorEventListener {
      */
     public StepDetector(Context context) {
         mContext = context;
-        int h = 480;  //屏幕的高
-        mYOffset = h * 0.5f;  //手机屏幕高的中心
+        //屏幕的高
+        int h = 480;
+        //手机屏幕高的中心
+        mYOffset = h * 0.5f;
         mScale[0] = -(h * 0.5f * (1.0f / (SensorManager.STANDARD_GRAVITY * 2)));
         mScale[1] = -(h * 0.5f * (1.0f / (SensorManager.MAGNETIC_FIELD_EARTH_MAX)));
 
@@ -70,10 +70,12 @@ public class StepDetector implements SensorEventListener {
                 //求三个方向上的速度和
                 float vSum = 0;
                 for (int i = 0; i < 3; i++) {
-                    final float v = mYOffset + event.values[i] * mScale[1];    //vt = v0 + at
+                    //vt = v0 + at
+                    final float v = mYOffset + event.values[i] * mScale[1];
                     vSum += v;
                 }
-                float v = vSum / 3; //获取平均速度
+                //获取平均速度
+                float v = vSum / 3;
                 float direction = (v > mLastValues ? 1 : (v < mLastValues ? -1 : 0));
 
                 //Direction changed
@@ -89,7 +91,8 @@ public class StepDetector implements SensorEventListener {
 
                         if (isAlmostAsLargeAsPrevious && isPreviousLargeEnough && isNotContra) {
                             end = System.currentTimeMillis();
-                            if (end - start > 500) {// 此时判断为走了一步
+                            // 此时判断为走了一步
+                            if (end - start > 500) {
                                 mCurrentSetp++;
                                 mLastMatch = extType;
                                 start = end;

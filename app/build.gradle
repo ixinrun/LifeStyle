@@ -14,32 +14,15 @@ android {
         multiDexEnabled true
     }
 
-    signingConfigs {
-        config {
-            storeFile file(String.valueOf(System.getenv('storeFile')))
-            storePassword String.valueOf(System.getenv('storePassword'))
-            keyAlias String.valueOf(System.getenv('keyAlias'))
-            keyPassword String.valueOf(System.getenv('keyPassword'))
-            v2SigningEnabled false
-        }
-    }
-
     buildTypes {
         debug {
             buildConfigField "boolean", "IS_DEBUG", "true"
-            //测试服务器
-            buildConfigField "String", "SERVER_URL", "\"http://192.168.0.1:8080\""
             minifyEnabled false
             zipAlignEnabled true
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-//            signingConfig signingConfigs.config
         }
         release {
-            //是否为debug模式
-            buildConfigField "boolean", "IS_DEBUG", "false"
-            //正式服务器地址
-            buildConfigField "String", "SERVER_URL", "\"http://192.168.0.1:8080\""
             //混淆
             minifyEnabled true
             //内存对齐
@@ -47,8 +30,6 @@ android {
             //移除无用的resource文件
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //签名
-            signingConfig signingConfigs.config
         }
     }
 }
@@ -59,18 +40,6 @@ dependencies {
     //support
     compile 'com.android.support:appcompat-v7:27.1.1'
     compile 'com.android.support:multidex:1.0.3'
-    //okhttp
-    compile 'com.squareup.okhttp3:okhttp:3.10.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.10.0'
-    compile 'com.squareup.okio:okio:1.14.0'
-    //retrofit
-    compile 'com.squareup.retrofit2:retrofit:2.4.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
-    compile 'com.squareup.retrofit2:retrofit-mock:2.4.0'
-    //rxjava
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.14'
     //gson
     compile 'com.google.code.gson:gson:2.8.5'
     //butterknife

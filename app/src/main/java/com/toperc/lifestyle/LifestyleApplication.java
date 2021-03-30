@@ -22,6 +22,6 @@ public class LifestyleApplication extends MultiDexApplication {
         super.onCreate();
         instance = this;
         ScreenUtil.resetDensity(this);
-        KeepAliveHandler.getInstance().init(this);
+//        KeepAliveHandler.getInstance().init(this);
     }
 }
