@@ -1,6 +1,6 @@
 package com.ixinrun.lifestyle;
 
-import androidx.multidex.MultiDexApplication;
+import com.ixinrun.app_base.BaseApplication;
 
 /**
  * 功能描述: application
@@ -9,17 +9,10 @@ import androidx.multidex.MultiDexApplication;
  * @author ixinrun
  * @data 2021/3/31
  */
-public class MyApp extends MultiDexApplication {
-
-    private static MyApp instance;
-
-    public static MyApp getInstance() {
-        return instance;
-    }
+public class MyApp extends BaseApplication {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = this;
     }
 }

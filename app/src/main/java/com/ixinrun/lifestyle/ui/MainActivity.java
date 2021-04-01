@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.ixinrun.app_base.activity.BaseActivity;
 import com.ixinrun.lifestyle.R;
-import com.ixinrun.lifestyle.base.BaseActivity;
 import com.ixinrun.lifestyle.ui.fragment.FunctionsFragment;
 import com.ixinrun.lifestyle.ui.fragment.MyCenterFragment;
 import com.ixinrun.lifestyle.ui.fragment.StepMainFragment;
@@ -40,11 +40,33 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private int mSaveIndex;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
+    protected int getContentView() {
+        return R.layout.activity_main;
+    }
 
+    @Override
+    protected void initComponent() {
+        main_bottom_function_view = findViewById(R.id.main_bottom_function_view);
+        main_bottom_function_iv = findViewById(R.id.main_bottom_function_iv);
+        main_bottom_step_view = findViewById(R.id.main_bottom_step_view);
+        main_bottom_step_iv = findViewById(R.id.main_bottom_step_iv);
+        main_bottom_setting_view = findViewById(R.id.main_bottom_setting_view);
+        main_bottom_setting_iv = findViewById(R.id.main_bottom_setting_iv);
+
+        fragmentManager = getSupportFragmentManager();
+    }
+
+    @Override
+    protected void initEventHandlers() {
+        super.initEventHandlers();
+        main_bottom_function_view.setOnClickListener(this);
+
+        main_bottom_step_view.setOnClickListener(this);
+        main_bottom_setting_view.setOnClickListener(this);
+    }
+
+    @Override
+    protected void loadData(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             //通过ID或者TAG找到“复活”的fragment
             mFunctionsFragment = (FunctionsFragment) fragmentManager.findFragmentByTag(FUNCTION_FRAGMENT);
@@ -67,20 +89,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onNewIntent(intent);
         int index = intent.getIntExtra(SELECT_TAB, 1);
         setSelectionTab(index);
-    }
-
-    private void initView() {
-        main_bottom_function_view = (LinearLayout) findViewById(R.id.main_bottom_function_view);
-        main_bottom_function_iv = (ImageView) findViewById(R.id.main_bottom_function_iv);
-        main_bottom_step_view = (LinearLayout) findViewById(R.id.main_bottom_step_view);
-        main_bottom_step_iv = (ImageView) findViewById(R.id.main_bottom_step_iv);
-        main_bottom_setting_view = (LinearLayout) findViewById(R.id.main_bottom_setting_view);
-        main_bottom_setting_iv = (ImageView) findViewById(R.id.main_bottom_setting_iv);
-        main_bottom_function_view.setOnClickListener(this);
-        main_bottom_step_view.setOnClickListener(this);
-        main_bottom_setting_view.setOnClickListener(this);
-
-        fragmentManager = getSupportFragmentManager();
     }
 
     private void setSelectionTab(int index) {
