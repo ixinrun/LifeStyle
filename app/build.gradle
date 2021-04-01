@@ -1,49 +1,47 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "com.toperc.lifestyle"
-        minSdkVersion 17
-        targetSdkVersion 27
+        applicationId "com.ixinrun.lifestyle"
+        minSdkVersion 18
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
         multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        debug {
-            buildConfigField "boolean", "IS_DEBUG", "true"
-            minifyEnabled false
-            zipAlignEnabled true
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
         release {
-            //混淆
             minifyEnabled true
-            //内存对齐
-            zipAlignEnabled true
-            //移除无用的resource文件
-            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    //support
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile 'com.android.support:multidex:1.0.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+
+    testImplementation 'junit:junit:4.1.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
     //gson
-    compile 'com.google.code.gson:gson:2.8.5'
-    //butterknife
-    compile 'com.jakewharton:butterknife:8.0.0'
-    //【其他】
-    implementation project(':lib_keepalive')
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
