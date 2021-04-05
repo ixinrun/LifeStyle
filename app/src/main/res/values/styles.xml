@@ -1,24 +1,8 @@
 <resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/trans_color</item>
-        <item name="colorPrimaryDark">@color/trans_color</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
     <!-- startapp page theme. -->
-    <style name="StartAPPTheme" parent="AppTheme">
+    <style name="SplashActivityTheme" parent="@style/AppTheme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
-
-    <!-- 无背景（会使用主题默认背景） -->
-    <style name="OnePixelActivityTheme" parent="AppTheme">
-        <item name="android:windowBackground">@null</item>
-        <item name="android:windowIsTranslucent">true</item>
-    </style>
-
 
 </resources>

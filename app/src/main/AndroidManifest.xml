@@ -18,9 +18,9 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.SplashActivity"
+            android:name=".main.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/StartAPPTheme">
+            android:theme="@style/SplashActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,16 +29,16 @@
         </activity>
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".main.MainActivity"
             android:launchMode="singleTask" />
 
         <service
-            android:name=".widget.step.StepCounterService"
+            android:name="com.ixinrun.module_common.widget.step.StepCounterService"
             android:exported="false"
             android:priority="1000" />
 
         <activity
-            android:name=".widget.keep_alive.OnePixelActivity"
+            android:name="com.ixinrun.module_common.widget.keep_alive.OnePixelActivity"
             android:excludeFromRecents="true"
             android:finishOnTaskLaunch="false"
             android:launchMode="singleInstance"

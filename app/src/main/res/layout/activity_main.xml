@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/main_bottom"
-        >
-    </FrameLayout>
+        />
 
     <LinearLayout
         android:id="@+id/main_bottom"
@@ -21,14 +20,14 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/main_bottom_function_view"
+            android:id="@+id/main_bottom_more_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/main_bottom_function_iv"
+                android:id="@+id/main_bottom_more_iv"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/main_bottom_function_a" />
@@ -53,14 +52,14 @@
 
 
         <LinearLayout
-            android:id="@+id/main_bottom_setting_view"
+            android:id="@+id/main_bottom_user_view"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/main_bottom_setting_iv"
+                android:id="@+id/main_bottom_user_iv"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/main_bottom_mycenter_a" />
@@ -68,10 +67,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
-
-
-
 
 </RelativeLayout>

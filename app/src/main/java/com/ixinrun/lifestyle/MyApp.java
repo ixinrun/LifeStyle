@@ -1,6 +1,7 @@
 package com.ixinrun.lifestyle;
 
-import com.ixinrun.app_base.BaseApplication;
+
+import com.ixinrun.base.BaseApplication;
 
 /**
  * 功能描述: application
@@ -11,8 +12,4 @@ import com.ixinrun.app_base.BaseApplication;
  */
 public class MyApp extends BaseApplication {
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
 }

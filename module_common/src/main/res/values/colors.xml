@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 标题栏 -->
+    <color name="titlebar_color">#FFFFFF</color>
+    <!-- 默认背景 -->
+    <color name="bg_color">#F1F1F1</color>
+    <!-- 主题色 -->
+    <color name="theme_color">#00a0e8</color>
+    <!-- 分割线 -->
+    <color name="divide_line_color">#EEEEEE</color>
+
+    <!-- 黑色系字体颜色 -->
+    <color name="text_color_black_high">#000000</color>
+    <color name="text_color_black_medium">#333333</color>
+    <color name="text_color_black_tint">#666666</color>
+    <color name="text_color_black_hint">#CCCCCC</color>
+
+    <!--常规-->
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_transparent">#00000000</color>
+
+</resources>

@@ -1,5 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+/**
+ * 引入统一管理依赖
+ */
+apply from: "config.gradle"
+
 buildscript {
     repositories {
         jcenter()
@@ -24,4 +29,13 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    /**
+     * 组件调试开关
+     * isDebug = true 是组件模块,说明是单独的App
+     * isDebug = false是集成模式,说明是依赖Lib
+     */
+    isDebug = true
 }

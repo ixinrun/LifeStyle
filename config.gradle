@@ -1,0 +1,19 @@
+ext {
+    android = [
+            applicationId            : "com.ixinrun.lifestyle",
+            compileSdkVersion        : 28,
+            buildToolsVersion        : "28.0.3",
+            minSdkVersion            : 18,
+            targetSdkVersion         : 28,
+            testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner",
+    ]
+
+    dependencies = [
+            junit           : "junit:junit:4.13.2",
+            test_ext        : "androidx.test.ext:junit:1.1.2",
+            test_espresso   : "androidx.test.espresso:espresso-core:3.3.0",
+            material        : "com.google.android.material:material:1.2.1",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:2.0.4",
+            module_base     : "com.github.ixinrun:MyApp:1.1.1",
+    ]
+}
