@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle;
+package com.ixinrun.common;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.ixinrun.module_app.test", appContext.getPackageName());
+        assertEquals("com.ixinrun.module_common", appContext.getPackageName());
     }
 }

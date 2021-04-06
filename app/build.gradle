@@ -30,13 +30,8 @@ android {
 }
 
 dependencies {
-    implementation project(':module_common')
-
-    println "app壳工程调试模式：" + isDebug
-    //非调试模式下，集成组件
-    if (!isDebug) {
-        implementation project(':module_more')
-        implementation project(':module_step')
-        implementation project(':module_user')
-    }
+    implementation project(':common')
+    implementation project(':module_more')
+    implementation project(':module_step')
+    implementation project(':module_user')
 }

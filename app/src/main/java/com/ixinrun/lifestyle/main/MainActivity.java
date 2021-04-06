@@ -2,6 +2,7 @@ package com.ixinrun.lifestyle.main;
 
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,11 +12,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.ixinrun.lifestyle.R;
-import com.ixinrun.module_common.base.BaseLsAct;
-import com.ixinrun.module_common.widget.step.StepCounterService;
-import com.ixinrun.module_more.MainMoreFrag;
-import com.ixinrun.module_step.MainStepFrag;
-import com.ixinrun.module_user.MainUserFrag;
+import com.ixinrun.common.base.BaseLsAct;
+import com.ixinrun.common.widget.step.StepCounterService;
+import com.ixinrun.module_more.main.MainMoreFrag;
+import com.ixinrun.module_step.main.MainStepFrag;
+import com.ixinrun.module_user.main.MainUserFrag;
 
 public class MainActivity extends BaseLsAct implements View.OnClickListener {
 

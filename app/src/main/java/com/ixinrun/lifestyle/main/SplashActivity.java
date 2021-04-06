@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+
+import com.ixinrun.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.R;
-import com.ixinrun.module_common.base.BaseLsAct;
 
 public class SplashActivity extends BaseLsAct {
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ixinrun.common">
+
+    <!-- 前台服务权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application>
+
+        <service
+            android:name="com.ixinrun.common.widget.step.StepCounterService"
+            android:exported="false"
+            android:priority="1000" />
+
+        <activity
+            android:name="com.ixinrun.common.widget.keep_alive.OnePixelActivity"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/OnePixelActivityTheme" />
+
+    </application>
+
+</manifest>

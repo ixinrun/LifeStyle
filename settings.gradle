@@ -1,6 +1,5 @@
 include ':app'
-include ':module_common'
+include ':common'
 include ':module_more'
 include ':module_step'
 include ':module_user'
-

@@ -1,8 +1,5 @@
-println "module_user 调试模式：" + isDebug
-if (isDebug) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
 }
 
 android {
@@ -29,22 +26,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    sourceSets {
-        main {
-            if (isDebug) {
-                manifest.srcFile 'src/debug/AndroidManifest.xml'
-            } else {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-                //集成开发模式下排除debug文件夹中的所有Java文件
-                java {
-                    exclude 'debug/**'
-                }
-            }
-        }
-    }
 }
 
 dependencies {
-    implementation project(':common')
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.so'], dir: 'libs')
+    api fileTree(include: ['*.aar'], dir: 'libs')
+    // test
+    testApi rootProject.ext.dependencies.junit
+    androidTestApi rootProject.ext.dependencies.test_ext
+    androidTestApi rootProject.ext.dependencies.test_espresso
+    // dependencies
+    api rootProject.ext.dependencies.material
+    api rootProject.ext.dependencies.constraintlayout
+    api rootProject.ext.dependencies.module_base
 }
