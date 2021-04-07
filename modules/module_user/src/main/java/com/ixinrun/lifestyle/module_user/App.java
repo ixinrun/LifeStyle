@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle;
+package com.ixinrun.lifestyle.module_user;
 
 
 import com.ixinrun.lifestyle.common.BaseLsApp;
