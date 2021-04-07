@@ -12,7 +12,6 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
     }
 
@@ -31,7 +30,11 @@ android {
 
 dependencies {
     implementation project(':common')
-    implementation project(':module_more')
-    implementation project(':module_step')
-    implementation project(':module_user')
+    println "main组件调试模式：" + isDebug
+    // 非调试模式下，集成组件
+    if (!isDebug) {
+        implementation project(':module_more')
+        implementation project(':module_step')
+        implementation project(':module_user')
+    }
 }

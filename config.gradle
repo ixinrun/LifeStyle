@@ -1,4 +1,13 @@
 ext {
+
+    /**
+     * 组件调试开关
+     * isDebug = true 是组件模块,说明是单独的App
+     * isDebug = false是集成模式,说明是依赖Lib
+     */
+    isDebug = false
+
+    // android闭包配置
     android = [
             applicationId            : "com.ixinrun.lifestyle",
             compileSdkVersion        : 28,
@@ -8,6 +17,7 @@ ext {
             testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner",
     ]
 
+    // 远程依赖配置
     dependencies = [
             junit           : "junit:junit:4.13.2",
             test_ext        : "androidx.test.ext:junit:1.1.2",
