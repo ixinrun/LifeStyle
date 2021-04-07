@@ -1,13 +1,12 @@
-package com.ixinrun.lifestyle.main;
+package com.ixinrun.lifestyle.module_main.main;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
-
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
-import com.ixinrun.lifestyle.R;
+import com.ixinrun.lifestyle.module_main.R;
 
 public class SplashActivity extends BaseLsAct {
 

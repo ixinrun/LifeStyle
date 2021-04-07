@@ -7,7 +7,9 @@ ext {
      */
     isDebug = false
 
-    // android闭包配置
+    /**
+     * android闭包配置
+     */
     android = [
             applicationId            : "com.ixinrun.lifestyle",
             compileSdkVersion        : 28,
@@ -17,7 +19,9 @@ ext {
             testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner",
     ]
 
-    // 远程依赖配置
+    /**
+     * 远程依赖配置
+     */
     dependencies = [
             junit           : "junit:junit:4.13.2",
             test_ext        : "androidx.test.ext:junit:1.1.2",
@@ -25,5 +29,8 @@ ext {
             material        : "com.google.android.material:material:1.2.1",
             constraintlayout: "androidx.constraintlayout:constraintlayout:2.0.4",
             module_base     : "com.github.ixinrun:MyApp:1.1.1",
+            // 路由
+            arouter_api     : "com.alibaba:arouter-api:1.5.1",
+            arouter_compiler: "com.alibaba:arouter-compiler:1.5.1",
     ]
 }

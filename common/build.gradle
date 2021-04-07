@@ -40,4 +40,7 @@ dependencies {
     api rootProject.ext.dependencies.material
     api rootProject.ext.dependencies.constraintlayout
     api rootProject.ext.dependencies.module_base
+
+    // 路由
+    api rootProject.ext.dependencies.arouter_api
 }

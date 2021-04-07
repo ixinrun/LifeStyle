@@ -11,10 +11,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
+import com.ixinrun.lifestyle.common.router.RouterConfig;
 import com.ixinrun.lifestyle.module_step.R;
 import com.ixinrun.lifestyle.module_step.widget.ArcProgressView;
 
+@Route(path = RouterConfig.ModuleStep.MainStepFrag)
 public class MainStepFrag extends BaseLsFrag {
     private ImageView runningIv;
     private ArcProgressView arcView;

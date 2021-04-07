@@ -8,9 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
+import com.ixinrun.lifestyle.common.router.RouterConfig;
 import com.ixinrun.lifestyle.module_more.R;
 
+@Route(path = RouterConfig.ModuleMore.MainMoreFrag)
 public class MainMoreFrag extends BaseLsFrag {
     @Override
     protected View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {

@@ -30,6 +30,7 @@ android {
 
 dependencies {
     implementation project(':common')
+
     println "main组件调试模式：" + isDebug
     // 非调试模式下，集成组件
     if (!isDebug) {

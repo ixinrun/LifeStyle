@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.main;
+package com.ixinrun.lifestyle.module_main.main;
 
 
 import android.content.Intent;
@@ -7,21 +7,24 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
+import com.ixinrun.lifestyle.common.router.RouterConfig;
 import com.ixinrun.lifestyle.common.widget.step.StepCounterService;
-import com.ixinrun.lifestyle.R;
-import com.ixinrun.lifestyle.module_more.main.MainMoreFrag;
-import com.ixinrun.lifestyle.module_step.main.MainStepFrag;
-import com.ixinrun.lifestyle.module_user.main.MainUserFrag;
+import com.ixinrun.lifestyle.module_main.R;
 
+
+@Route(path = RouterConfig.ModuleMain.MainActivity)
 public class MainActivity extends BaseLsAct implements View.OnClickListener {
 
-    private MainMoreFrag mMainMoreFrag;
-    private MainStepFrag mMainStepFrag;
-    private MainUserFrag mMainUerFrag;
+    private Fragment mMainMoreFrag;
+    private Fragment mMainStepFrag;
+    private Fragment mMainUerFrag;
     private FragmentManager mFragMgr;
 
     private LinearLayout mMainBottomMoreView;
@@ -69,9 +72,9 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     protected void loadData(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             //通过ID或者TAG找到“复活”的fragment
-            mMainMoreFrag = (MainMoreFrag) mFragMgr.findFragmentByTag(MAIN_MORE_FRAG);
-            mMainStepFrag = (MainStepFrag) mFragMgr.findFragmentByTag(MAIN_STEP_FRAG);
-            mMainUerFrag = (MainUserFrag) mFragMgr.findFragmentByTag(MAIN_USER_FRAG);
+            mMainMoreFrag = mFragMgr.findFragmentByTag(MAIN_MORE_FRAG);
+            mMainStepFrag = mFragMgr.findFragmentByTag(MAIN_STEP_FRAG);
+            mMainUerFrag = mFragMgr.findFragmentByTag(MAIN_USER_FRAG);
             //拿到activity结束时保存的状态
             int index = (int) savedInstanceState.get(SAVE_STATE);
             //恢复Fragment
@@ -102,7 +105,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                 if (mMainMoreFrag != null) {
                     transaction.show(mMainMoreFrag);
                 } else {
-                    mMainMoreFrag = new MainMoreFrag();
+                    mMainMoreFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleMore.MainMoreFrag).navigation();
                     transaction.add(R.id.main_container_view, mMainMoreFrag, MAIN_MORE_FRAG);
                 }
                 break;
@@ -111,7 +114,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                 if (mMainStepFrag != null) {
                     transaction.show(mMainStepFrag);
                 } else {
-                    mMainStepFrag = new MainStepFrag();
+                    mMainStepFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleStep.MainStepFrag).navigation();
                     transaction.add(R.id.main_container_view, mMainStepFrag, MAIN_STEP_FRAG);
                 }
                 break;
@@ -120,7 +123,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                 if (mMainUerFrag != null) {
                     transaction.show(mMainUerFrag);
                 } else {
-                    mMainUerFrag = new MainUserFrag();
+                    mMainUerFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleUser.MainUserFrag).navigation();
                     transaction.add(R.id.main_container_view, mMainUerFrag, MAIN_USER_FRAG);
                 }
                 break;
@@ -152,18 +155,13 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.main_bottom_more_view:
-                setSelectionTab(0);
-                break;
-            case R.id.main_bottom_step_view:
-                setSelectionTab(1);
-                break;
-            case R.id.main_bottom_user_view:
-                setSelectionTab(2);
-                break;
-            default:
-                break;
+        int id = v.getId();
+        if (id == R.id.main_bottom_more_view) {
+            setSelectionTab(0);
+        } else if (id == R.id.main_bottom_step_view) {
+            setSelectionTab(1);
+        } else if (id == R.id.main_bottom_user_view) {
+            setSelectionTab(2);
         }
     }
 
