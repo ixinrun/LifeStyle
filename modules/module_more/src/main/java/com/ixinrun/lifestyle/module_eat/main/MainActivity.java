@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.module_more.main;
+package com.ixinrun.lifestyle.module_eat.main;
 
 import androidx.fragment.app.Fragment;
 

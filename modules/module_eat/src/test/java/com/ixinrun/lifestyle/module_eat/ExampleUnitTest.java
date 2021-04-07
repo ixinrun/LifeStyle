@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.module_more;
+package com.ixinrun.lifestyle.module_eat;
 
 import org.junit.Test;
 

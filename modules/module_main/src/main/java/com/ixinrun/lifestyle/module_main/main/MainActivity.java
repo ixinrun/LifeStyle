@@ -22,20 +22,24 @@ import com.ixinrun.lifestyle.module_main.R;
 @Route(path = RouterConfig.ModuleMain.MainActivity)
 public class MainActivity extends BaseLsAct implements View.OnClickListener {
 
-    private Fragment mMainMoreFrag;
     private Fragment mMainStepFrag;
+    private Fragment mMainEatFrag;
+    private Fragment mMainMoreFrag;
     private Fragment mMainUerFrag;
     private FragmentManager mFragMgr;
 
-    private LinearLayout mMainBottomMoreView;
-    private ImageView mMainBottomMoreIv;
     private LinearLayout mMainBottomStepView;
     private ImageView mMainBottomStepIv;
+    private LinearLayout mMainBottomEatView;
+    private ImageView mMainBottomEatIv;
+    private LinearLayout mMainBottomMoreView;
+    private ImageView mMainBottomMoreIv;
     private LinearLayout mMainBottomUserView;
     private ImageView mMainBottomUserIv;
 
-    private static final String MAIN_MORE_FRAG = "MAIN_MORE_FRAG";
     private static final String MAIN_STEP_FRAG = "MAIN_STEP_FRAG";
+    private static final String MAIN_EAT_FRAG = "MAIN_EAT_FRAG";
+    private static final String MAIN_MORE_FRAG = "MAIN_MORE_FRAG";
     private static final String MAIN_USER_FRAG = "MAIN_USER_FRAG";
     private static final String SAVE_STATE = "SAVE_STATE";
     public static final String SELECT_TAB = "SELECT_TAB";
@@ -45,10 +49,12 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     @Override
     protected void initView() {
         setContentView(R.layout.activity_main);
-        mMainBottomMoreView = findViewById(R.id.main_bottom_more_view);
-        mMainBottomMoreIv = findViewById(R.id.main_bottom_more_iv);
         mMainBottomStepView = findViewById(R.id.main_bottom_step_view);
         mMainBottomStepIv = findViewById(R.id.main_bottom_step_iv);
+        mMainBottomEatView = findViewById(R.id.main_bottom_eat_view);
+        mMainBottomEatIv = findViewById(R.id.main_bottom_eat_iv);
+        mMainBottomMoreView = findViewById(R.id.main_bottom_more_view);
+        mMainBottomMoreIv = findViewById(R.id.main_bottom_more_iv);
         mMainBottomUserView = findViewById(R.id.main_bottom_user_view);
         mMainBottomUserIv = findViewById(R.id.main_bottom_user_iv);
 
@@ -58,8 +64,9 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     @Override
     protected void initEvent() {
         super.initEvent();
-        mMainBottomMoreView.setOnClickListener(this);
         mMainBottomStepView.setOnClickListener(this);
+        mMainBottomEatView.setOnClickListener(this);
+        mMainBottomMoreView.setOnClickListener(this);
         mMainBottomUserView.setOnClickListener(this);
     }
 
@@ -72,15 +79,16 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     protected void loadData(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
             //通过ID或者TAG找到“复活”的fragment
-            mMainMoreFrag = mFragMgr.findFragmentByTag(MAIN_MORE_FRAG);
             mMainStepFrag = mFragMgr.findFragmentByTag(MAIN_STEP_FRAG);
+            mMainEatFrag = mFragMgr.findFragmentByTag(MAIN_EAT_FRAG);
+            mMainMoreFrag = mFragMgr.findFragmentByTag(MAIN_MORE_FRAG);
             mMainUerFrag = mFragMgr.findFragmentByTag(MAIN_USER_FRAG);
             //拿到activity结束时保存的状态
             int index = (int) savedInstanceState.get(SAVE_STATE);
             //恢复Fragment
             setSelectionTab(index);
         } else {
-            setSelectionTab(1);
+            setSelectionTab(0);
         }
 
         //开启计步服务
@@ -101,15 +109,6 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
         hideFragments(transaction);
         switch (index) {
             case 0:
-                mMainBottomMoreIv.setBackgroundResource(R.drawable.main_bottom_function_b);
-                if (mMainMoreFrag != null) {
-                    transaction.show(mMainMoreFrag);
-                } else {
-                    mMainMoreFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleMore.MainMoreFrag).navigation();
-                    transaction.add(R.id.main_container_view, mMainMoreFrag, MAIN_MORE_FRAG);
-                }
-                break;
-            case 1:
                 mMainBottomStepIv.setBackgroundResource(R.drawable.main_bottom_step_b);
                 if (mMainStepFrag != null) {
                     transaction.show(mMainStepFrag);
@@ -118,7 +117,26 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                     transaction.add(R.id.main_container_view, mMainStepFrag, MAIN_STEP_FRAG);
                 }
                 break;
+            case 1:
+                mMainBottomEatIv.setBackgroundResource(R.drawable.main_bottom_eat_b);
+                if (mMainEatFrag != null) {
+                    transaction.show(mMainEatFrag);
+                } else {
+                    mMainEatFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleEat.MainEatFrag).navigation();
+                    transaction.add(R.id.main_container_view, mMainEatFrag, MAIN_EAT_FRAG);
+                }
+                break;
+
             case 2:
+                mMainBottomMoreIv.setBackgroundResource(R.drawable.main_bottom_function_b);
+                if (mMainMoreFrag != null) {
+                    transaction.show(mMainMoreFrag);
+                } else {
+                    mMainMoreFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleMore.MainMoreFrag).navigation();
+                    transaction.add(R.id.main_container_view, mMainMoreFrag, MAIN_MORE_FRAG);
+                }
+                break;
+            case 3:
                 mMainBottomUserIv.setBackgroundResource(R.drawable.main_bottom_mycenter_b);
                 if (mMainUerFrag != null) {
                     transaction.show(mMainUerFrag);
@@ -136,17 +154,21 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     }
 
     private void cleanSelection() {
-        mMainBottomMoreIv.setBackgroundResource(R.drawable.main_bottom_function_a);
         mMainBottomStepIv.setBackgroundResource(R.drawable.main_bottom_step_a);
+        mMainBottomStepIv.setBackgroundResource(R.drawable.main_bottom_eat_a);
+        mMainBottomMoreIv.setBackgroundResource(R.drawable.main_bottom_function_a);
         mMainBottomUserIv.setBackgroundResource(R.drawable.main_bottom_mycenter_a);
     }
 
     private void hideFragments(FragmentTransaction transaction) {
-        if (mMainMoreFrag != null) {
-            transaction.hide(mMainMoreFrag);
-        }
         if (mMainStepFrag != null) {
             transaction.hide(mMainStepFrag);
+        }
+        if (mMainEatFrag != null) {
+            transaction.hide(mMainEatFrag);
+        }
+        if (mMainMoreFrag != null) {
+            transaction.hide(mMainMoreFrag);
         }
         if (mMainUerFrag != null) {
             transaction.hide(mMainUerFrag);
@@ -156,10 +178,12 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.main_bottom_more_view) {
+        if (id == R.id.main_bottom_step_view) {
             setSelectionTab(0);
-        } else if (id == R.id.main_bottom_step_view) {
+        } else if (id == R.id.main_bottom_eat_view) {
             setSelectionTab(1);
+        } else if (id == R.id.main_bottom_more_view) {
+            setSelectionTab(2);
         } else if (id == R.id.main_bottom_user_view) {
             setSelectionTab(2);
         }

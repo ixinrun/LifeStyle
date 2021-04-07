@@ -8,8 +8,13 @@
         android:id="@+id/main_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/main_bottom"
-        />
+        android:layout_above="@+id/main_bottom" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_bottom"
+        android:background="@drawable/main_bottom_shadow" />
 
     <LinearLayout
         android:id="@+id/main_bottom"
@@ -18,22 +23,6 @@
         android:layout_alignParentBottom="true"
         android:background="#ffffff"
         android:orientation="horizontal">
-
-        <LinearLayout
-            android:id="@+id/main_bottom_more_view"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/main_bottom_more_iv"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/main_bottom_function_a" />
-
-        </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/main_bottom_step_view"
@@ -50,6 +39,35 @@
                 android:background="@drawable/main_bottom_step_b" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/main_bottom_eat_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/main_bottom_eat_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/main_bottom_eat_a" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_bottom_more_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_bottom_more_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/main_bottom_function_a" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/main_bottom_user_view"

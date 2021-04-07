@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.module_more.main;
+package com.ixinrun.lifestyle.module_eat.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
 import com.ixinrun.lifestyle.common.router.RouterConfig;
-import com.ixinrun.lifestyle.module_more.R;
+import com.ixinrun.lifestyle.module_eat.R;
 
 @Route(path = RouterConfig.ModuleMore.MainMoreFrag)
 public class MainMoreFrag extends BaseLsFrag {

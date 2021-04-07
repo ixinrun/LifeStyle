@@ -18,20 +18,27 @@ public class RouterConfig {
     }
 
     /**
-     * module_more
-     */
-    public static class ModuleMore {
-        public static final String name = "/module_more";
-        public static final String MainMoreFrag = name + "/MainMoreFrag";
-
-    }
-
-    /**
      * module_step
      */
     public static class ModuleStep {
         public static final String name = "/module_step";
         public static final String MainStepFrag = name + "/MainStepFrag";
+    }
+
+    /**
+     * module_eat
+     */
+    public static class ModuleEat {
+        public static final String name = "/module_step";
+        public static final String MainEatFrag = name + "/MainEatFrag";
+    }
+
+    /**
+     * module_more
+     */
+    public static class ModuleMore {
+        public static final String name = "/module_more";
+        public static final String MainMoreFrag = name + "/MainMoreFrag";
     }
 
     /**
