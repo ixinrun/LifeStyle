@@ -10,6 +10,9 @@ android {
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
+        if (isDebug){
+            applicationId "com.ixinrun.lifestyle.module_eat"
+        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1

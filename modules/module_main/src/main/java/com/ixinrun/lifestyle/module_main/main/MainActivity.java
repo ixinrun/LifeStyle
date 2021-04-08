@@ -98,7 +98,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        int index = intent.getIntExtra(SELECT_TAB, 1);
+        int index = intent.getIntExtra(SELECT_TAB, 0);
         setSelectionTab(index);
     }
 
@@ -117,6 +117,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                     transaction.add(R.id.main_container_view, mMainStepFrag, MAIN_STEP_FRAG);
                 }
                 break;
+
             case 1:
                 mMainBottomEatIv.setBackgroundResource(R.drawable.main_bottom_eat_b);
                 if (mMainEatFrag != null) {
@@ -136,6 +137,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                     transaction.add(R.id.main_container_view, mMainMoreFrag, MAIN_MORE_FRAG);
                 }
                 break;
+
             case 3:
                 mMainBottomUserIv.setBackgroundResource(R.drawable.main_bottom_mycenter_b);
                 if (mMainUerFrag != null) {
@@ -145,6 +147,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                     transaction.add(R.id.main_container_view, mMainUerFrag, MAIN_USER_FRAG);
                 }
                 break;
+
             default:
                 break;
         }
@@ -155,7 +158,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
 
     private void cleanSelection() {
         mMainBottomStepIv.setBackgroundResource(R.drawable.main_bottom_step_a);
-        mMainBottomStepIv.setBackgroundResource(R.drawable.main_bottom_eat_a);
+        mMainBottomEatIv.setBackgroundResource(R.drawable.main_bottom_eat_a);
         mMainBottomMoreIv.setBackgroundResource(R.drawable.main_bottom_function_a);
         mMainBottomUserIv.setBackgroundResource(R.drawable.main_bottom_mycenter_a);
     }
@@ -185,7 +188,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
         } else if (id == R.id.main_bottom_more_view) {
             setSelectionTab(2);
         } else if (id == R.id.main_bottom_user_view) {
-            setSelectionTab(2);
+            setSelectionTab(3);
         }
     }
 

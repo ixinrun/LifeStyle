@@ -15,6 +15,7 @@ import com.ixinrun.lifestyle.module_eat.R;
 
 @Route(path = RouterConfig.ModuleEat.MainEatFrag)
 public class MainEatFrag extends BaseLsFrag {
+
     @Override
     protected View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
         return inflater.inflate(R.layout.main_eat_frag_layout, null);

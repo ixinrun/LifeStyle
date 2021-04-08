@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.module_eat;
+package com.ixinrun.lifestyle.module_more;
 
 import android.content.Context;
 

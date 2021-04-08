@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme_color"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
 
     <LinearLayout
         android:id="@+id/content_ll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:orientation="vertical">
 
         <TextView
@@ -17,18 +22,23 @@
             android:layout_height="wrap_content"
             android:text="Life"
             android:textColor="@color/color_white"
-            android:textSize="64dp"
+            android:textSize="96dp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="120dp"
             android:text="style"
             android:textColor="@color/color_white"
-            android:textSize="24dp" />
+            android:textSize="36dp" />
 
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,4 +51,4 @@
         android:textSize="12dp" />
 
 
-</RelativeLayout>
+</LinearLayout>

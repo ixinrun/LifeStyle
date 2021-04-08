@@ -21,7 +21,7 @@ public class RouterConfig {
      * module_step
      */
     public static class ModuleStep {
-        public static final String name = "/module_step";
+        private static final String name = "/module_step";
         public static final String MainStepFrag = name + "/MainStepFrag";
     }
 
@@ -29,7 +29,7 @@ public class RouterConfig {
      * module_eat
      */
     public static class ModuleEat {
-        public static final String name = "/module_step";
+        private static final String name = "/module_eat";
         public static final String MainEatFrag = name + "/MainEatFrag";
     }
 
@@ -37,7 +37,7 @@ public class RouterConfig {
      * module_more
      */
     public static class ModuleMore {
-        public static final String name = "/module_more";
+        private static final String name = "/module_more";
         public static final String MainMoreFrag = name + "/MainMoreFrag";
     }
 
@@ -45,7 +45,7 @@ public class RouterConfig {
      * module_user
      */
     public static class ModuleUser {
-        public static final String name = "/module_user";
+        private static final String name = "/module_user";
         public static final String MainUserFrag = name + "/MainUserFrag";
     }
 
