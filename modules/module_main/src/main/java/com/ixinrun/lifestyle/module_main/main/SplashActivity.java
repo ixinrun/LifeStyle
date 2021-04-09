@@ -3,9 +3,9 @@ package com.ixinrun.lifestyle.module_main.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
+import android.widget.TextView;
 
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.module_main.R;
@@ -20,12 +20,18 @@ public class SplashActivity extends BaseLsAct {
     @Override
     protected void initView() {
         setContentView(R.layout.activity_splash);
-        View contentView = findViewById(R.id.content_ll);
+        TextView bigWord = findViewById(R.id.big_word);
+        TextView smallWord = findViewById(R.id.small_word);
 
-        AlphaAnimation alphaAnimation = new AlphaAnimation(0.5f, 1f);
-        alphaAnimation.setInterpolator(new AccelerateInterpolator());
-        alphaAnimation.setDuration(1500);
-        contentView.startAnimation(alphaAnimation);
+        AlphaAnimation anim = new AlphaAnimation(0.5f, 1f);
+        anim.setInterpolator(new AccelerateInterpolator());
+        anim.setDuration(800);
+        bigWord.startAnimation(anim);
+
+        AlphaAnimation anim1 = new AlphaAnimation(0.5f, 1f);
+        anim1.setInterpolator(new AccelerateInterpolator());
+        anim1.setDuration(1600);
+        smallWord.startAnimation(anim1);
     }
 
     @Override
@@ -38,6 +44,6 @@ public class SplashActivity extends BaseLsAct {
                 overridePendingTransition(R.anim.trans_right_in, R.anim.trans_left_out);
                 finish();
             }
-        }, 3000);
+        }, 2000);
     }
 }
