@@ -20,9 +20,9 @@ public class RouterConfig {
     /**
      * module_step
      */
-    public static class ModuleStep {
+    public static class ModuleRun {
         private static final String name = "/module_step";
-        public static final String MainStepFrag = name + "/MainStepFrag";
+        public static final String MainRunFrag = name + "/MainStepFrag";
     }
 
     /**

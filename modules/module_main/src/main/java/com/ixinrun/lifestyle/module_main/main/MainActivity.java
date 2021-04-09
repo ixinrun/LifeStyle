@@ -113,7 +113,7 @@ public class MainActivity extends BaseLsAct implements View.OnClickListener {
                 if (mMainStepFrag != null) {
                     transaction.show(mMainStepFrag);
                 } else {
-                    mMainStepFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleStep.MainStepFrag).navigation();
+                    mMainStepFrag = (Fragment) ARouter.getInstance().build(RouterConfig.ModuleRun.MainRunFrag).navigation();
                     transaction.add(R.id.main_container_view, mMainStepFrag, MAIN_STEP_FRAG);
                 }
                 break;
