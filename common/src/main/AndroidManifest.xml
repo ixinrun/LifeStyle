@@ -7,13 +7,8 @@
 
     <application>
 
-        <service
-            android:name=".widget.step.StepCounterService"
-            android:exported="false"
-            android:priority="1000" />
-
         <activity
-            android:name=".widget.keep_alive.OnePixelActivity"
+            android:name=".base.keep_alive.OnePixelActivity"
             android:excludeFromRecents="true"
             android:finishOnTaskLaunch="false"
             android:launchMode="singleInstance"

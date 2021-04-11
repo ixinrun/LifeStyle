@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.common.widget.step;
+package com.ixinrun.lifestyle.module_run.main.util;
 
 import android.content.Context;
 import android.hardware.Sensor;

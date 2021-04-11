@@ -13,10 +13,8 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.common.router.RouterConfig;
-import com.ixinrun.lifestyle.common.widget.step.StepCounterService;
 import com.ixinrun.lifestyle.module_main.R;
 import com.ixinrun.lifestyle.module_main.widget.MainNavigationBar;
-
 
 @Route(path = RouterConfig.ModuleMain.MainActivity)
 public class MainActivity extends BaseLsAct {
@@ -79,9 +77,6 @@ public class MainActivity extends BaseLsAct {
             index = (int) savedInstanceState.get(SAVE_STATE);
         }
         mNavBar.switchTab(index);
-
-        //开启计步服务
-        startService(new Intent(this, StepCounterService.class));
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.ixinrun.lifestyle.module_run.main.widget;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -21,7 +20,7 @@ import com.ixinrun.lifestyle.module_run.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WalkingView extends FrameLayout {
+public class StepView extends FrameLayout {
 
     private ImageView mRunningIv;
     private TextView mDateTv;
@@ -33,12 +32,11 @@ public class WalkingView extends FrameLayout {
 
     private boolean mIsRunning;
 
-
-    public WalkingView(@NonNull Context context) {
+    public StepView(@NonNull Context context) {
         this(context, null);
     }
 
-    public WalkingView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public StepView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView();
         loadData();
@@ -62,12 +60,29 @@ public class WalkingView extends FrameLayout {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
+                if (position == mStepVpAdapter.getItemCount() - 1) {
+                    startStepAnimal(mIsRunning);
+                    mDateTv.setText("今天");
+                } else {
+                    mRunningIv.setImageDrawable(getResources().getDrawable(R.drawable.run_status_stop));
+                    mDateTv.setText("昨日");
+                }
+            }
 
+            private void startStepAnimal(boolean isRunning) {
+                AnimationDrawable anim = new AnimationDrawable();
+                if (isRunning) {
+                    anim.addFrame(getResources().getDrawable(R.drawable.run_status_running0), 150);
+                    anim.addFrame(getResources().getDrawable(R.drawable.run_status_running1), 150);
+                } else {
+                    anim.addFrame(getResources().getDrawable(R.drawable.run_status_running0), 600);
+                    anim.addFrame(getResources().getDrawable(R.drawable.run_status_running1), 600);
+                }
+                anim.setOneShot(false);
+                mRunningIv.setImageDrawable(anim);
+                anim.start();
             }
         });
-
-        // 动画
-        setStepStatus(true);
     }
 
     static class StepVpAdapter extends SingleTypeAdapter<StepBean> {
@@ -173,29 +188,13 @@ public class WalkingView extends FrameLayout {
         mDaySteps.add(b);
 
         StepBean b1 = new StepBean();
-        b1.setStepCount(8000);
-        b1.setLastStepCount(5000);
+        b1.setStepCount(0);
+        b1.setLastStepCount(0);
         b1.setTargetStepCount(10000);
         mDaySteps.add(b1);
 
         mStepVpAdapter.setData(mDaySteps);
         mStepVp.setCurrentItem(mDaySteps.size() - 1);
-
-        //初始化步数
-        testStep(new Handler(), 100);
-    }
-
-    // todo test!!!!
-    private void testStep(Handler h, int count) {
-        count = count + 100;
-        int finalCount = count;
-        h.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                setStepCount(finalCount);
-                testStep(h, finalCount);
-            }
-        }, 100);
     }
 
     /**
@@ -209,10 +208,10 @@ public class WalkingView extends FrameLayout {
         b.setLastStepCount(b.getStepCount());
         b.setStepCount(count);
 
-//        // 刷新界面
-//        if (mStepVp.getCurrentItem() == last) {
-//            mStepVpAdapter.notifyItemChanged(last, 0);
-//        }
+        // 刷新界面
+        if (mStepVp.getCurrentItem() == last) {
+            mStepVpAdapter.notifyItemChanged(last, 0);
+        }
     }
 
     /**
@@ -222,16 +221,5 @@ public class WalkingView extends FrameLayout {
      */
     public void setStepStatus(boolean isRunning) {
         this.mIsRunning = isRunning;
-        AnimationDrawable anim = new AnimationDrawable();
-        if (isRunning) {
-            anim.addFrame(getResources().getDrawable(R.drawable.run_status_running0), 150);
-            anim.addFrame(getResources().getDrawable(R.drawable.run_status_running1), 150);
-        } else {
-            anim.addFrame(getResources().getDrawable(R.drawable.run_status_running0), 600);
-            anim.addFrame(getResources().getDrawable(R.drawable.run_status_running1), 600);
-        }
-        anim.setOneShot(false);
-        mRunningIv.setImageDrawable(anim);
-        anim.start();
     }
 }

@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.common.widget.keep_alive;
+package com.ixinrun.lifestyle.common.base.keep_alive;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -8,11 +8,11 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 
 /**
- * 功能描述: 保活服务
+ * 描述: 保活服务
  * </p>
  *
  * @author ixinrun
- * @data 2021/3/31
+ * @date 2021/3/31
  */
 public class KeepAliveService extends Service {
 

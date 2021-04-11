@@ -6,99 +6,94 @@
     android:layout_height="match_parent"
     tools:background="@color/theme_color">
 
-    <FrameLayout
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_centerInParent="true">
+    <com.ixinrun.lifestyle.module_run.main.widget.ArcProgressView
+        android:id="@+id/step_progress_view"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        app:ArcColor="#64f4f4f4"
+        app:ArcProgressColor="@color/color_white"
+        app:ArcWidth="16dp"
+        app:LineSpace="4"
+        app:LineWidth="4"
+        app:duration="1500" />
 
-        <com.ixinrun.lifestyle.module_run.main.widget.ArcProgressView
-            android:id="@+id/step_progress_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:ArcColor="#64f4f4f4"
-            app:ArcProgressColor="@color/color_white"
-            app:ArcWidth="16dp"
-            app:LineSpace="4"
-            app:LineWidth="4"
-            app:duration="1500" />
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:paddingBottom="28dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="步数"
+                android:textColor="@color/color_white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/step_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                android:textColor="#f6f4cd"
+                android:textSize="36dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/calorie_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="步数"
+                    android:text="0千卡"
                     android:textColor="@color/color_white"
-                    android:textSize="14dp" />
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/color_white" />
 
                 <TextView
-                    android:id="@+id/step_count_tv"
+                    android:id="@+id/distance_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="0"
-                    android:textColor="#f6f4cd"
-                    android:textSize="36dp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/calorie_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0千卡"
-                        android:textColor="@color/color_white"
-                        android:textSize="12dp" />
-
-                    <View
-                        android:layout_width="0.6dp"
-                        android:layout_height="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@color/color_white" />
-
-                    <TextView
-                        android:id="@+id/distance_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0公里"
-                        android:textColor="@color/color_white"
-                        android:textSize="12dp" />
-
-                </LinearLayout>
+                    android:text="0公里"
+                    android:textColor="@color/color_white"
+                    android:textSize="12dp" />
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/target_step_count_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="24dp"
-                android:text="目标：0步"
-                android:textColor="@color/color_white"
-                android:textSize="12dp" />
+        </LinearLayout>
 
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/target_step_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="目标：0步"
+            android:textColor="@color/color_white"
+            android:textSize="12dp" />
 
-    </FrameLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
 

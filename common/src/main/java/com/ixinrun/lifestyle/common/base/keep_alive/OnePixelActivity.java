@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.common.widget.keep_alive;
+package com.ixinrun.lifestyle.common.base.keep_alive;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -9,21 +9,21 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 
 /**
- * 功能描述: 一像素activity
+ * 描述: 一像素activity
  * </p>
  *
  * @author ixinrun
- * @data 2021/3/31
+ * @date 2021/3/31
  */
 public class OnePixelActivity extends Activity {
 
     private static final String INTENT_ACTION = "activity_finish";
+    private Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +48,13 @@ public class OnePixelActivity extends Activity {
     }
 
     private void checkAlive(final int delayMillis) {
-        new Handler().postDelayed(new Runnable() {
+        if (mHandler == null) {
+            mHandler = new Handler();
+        }
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (!isFinishing()) {
-                    Log.i("TAG", "+++++++++++++++OnePixelScreenActivity is alive.");
                     checkAlive(delayMillis);
                 }
             }

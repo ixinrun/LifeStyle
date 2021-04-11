@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.ixinrun.lifestyle.module_run.main.widget.WalkingView
+        <com.ixinrun.lifestyle.module_run.main.widget.StepView
+            android:id="@+id/step_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/theme_color" />

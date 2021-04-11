@@ -26,11 +26,20 @@ ext {
             junit           : "junit:junit:4.13.2",
             test_ext        : "androidx.test.ext:junit:1.1.2",
             test_espresso   : "androidx.test.espresso:espresso-core:3.3.0",
+            module_base     : "com.github.ixinrun:MyApp:1.1.1",
             material        : "com.google.android.material:material:1.2.1",
             constraintlayout: "androidx.constraintlayout:constraintlayout:2.0.4",
-            module_base     : "com.github.ixinrun:MyApp:1.1.1",
             // 路由
             arouter_api     : "com.alibaba:arouter-api:1.5.1",
             arouter_compiler: "com.alibaba:arouter-compiler:1.5.1",
+            // ViewModel
+            viewmodel       : "androidx.lifecycle:lifecycle-viewmodel:2.3.0",
+            // LiveData
+            livedata        : "androidx.lifecycle:lifecycle-livedata:2.3.0",
+            //room
+            room_runtime    : "androidx.room:room-runtime:2.2.6",
+            room_compiler   : "androidx.room:room-compiler:2.2.6",
+            //图表
+            MPAndroidChart  : "com.github.PhilJay:MPAndroidChart:v3.0.3"
     ]
 }
