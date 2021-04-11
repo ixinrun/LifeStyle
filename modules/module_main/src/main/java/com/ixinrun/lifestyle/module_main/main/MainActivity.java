@@ -45,7 +45,7 @@ public class MainActivity extends BaseLsAct {
         mNavBar.addTab(R.drawable.main_bottom_run_a, R.drawable.main_bottom_run_b, "运动")
                 .addTab(R.drawable.main_bottom_eat_a, R.drawable.main_bottom_eat_b, "吃饭")
                 .addTab(R.drawable.main_bottom_more_a, R.drawable.main_bottom_more_b, "更多")
-                .addTab(R.drawable.main_bottom_user_a, R.drawable.main_bottom_user_b, "");
+                .addTab(R.drawable.main_bottom_user_a, R.drawable.main_bottom_user_b, null);
 
         mFragMgr = getSupportFragmentManager();
     }

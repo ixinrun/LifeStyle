@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.module_run.widget;
+package com.ixinrun.lifestyle.module_run.main.widget;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -39,49 +39,26 @@ public class ArcProgressView extends View {
     private final static float SWEEP_ANGLE = 270;
     private float mMaxProgress;
     private float mCurrentAngle = 0;
-    private int mWidth, mHeight;                       //view最终真实宽高
-    private float k;  // sweepAngle / mMaxProgress 的值
+    // view最终真实宽高
+    private int mWidth, mHeight;
+    // sweepAngle / mMaxProgress 的值
+    private float k;
 
     private ValueAnimator mProgressValueAnimator;
     private OnValueChangeListener valueChangeListener;
 
-    private Context mContext;
-
-    /**
-     * 通过new的过程来生成自定义view的对象,进第一个构造方法
-     *
-     * @param context
-     */
     public ArcProgressView(Context context) {
-        super(context);
+        this(context, null);
     }
 
-    /**
-     * 在xml布局中inflate该view或findviewbyid方法来找到view，进入第二构造方法
-     *
-     * @param context
-     * @param attrs
-     */
     public ArcProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs);
+        initView(context, attrs);
+        initValueAnimator();
     }
 
-    /**
-     * 同第二个构造方法一样，只不过多了一个style
-     *
-     * @param context
-     * @param attrs
-     * @param defStyleAttr
-     */
-    public ArcProgressView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(context, attrs);
-    }
-
-    private void init(Context context, AttributeSet attrs) {
+    private void initView(Context context, AttributeSet attrs) {
         setWillNotDraw(false);  //触发view调用重写onDraw()方法；
-        mContext = context;
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ArcProgresslView);
         //获取自定义属性和默认值
         mArcColor = typedArray.getColor(R.styleable.ArcProgresslView_ArcColor, Color.RED);
@@ -91,7 +68,6 @@ public class ArcProgressView extends View {
         mLineWith = typedArray.getInteger(R.styleable.ArcProgresslView_LineWidth, 4);
         mLineSpace = typedArray.getInteger(R.styleable.ArcProgresslView_LineSpace, 4);
         typedArray.recycle();
-        initValueAnimator();
     }
 
     /**
@@ -111,10 +87,6 @@ public class ArcProgressView extends View {
                 }
             }
         });
-    }
-
-    public interface OnValueChangeListener {
-        void onValueChange(float value);
     }
 
     @Override
@@ -153,8 +125,8 @@ public class ArcProgressView extends View {
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = measureSize(DensityUtil.dpi2px(mContext, DEFAULT_WIDTH), widthMeasureSpec);
-        int height = measureSize(DensityUtil.dpi2px(mContext, DEFAULT_HEIGHT), heightMeasureSpec);
+        int width = measureSize(DensityUtil.dpi2px(getContext(), DEFAULT_WIDTH), widthMeasureSpec);
+        int height = measureSize(DensityUtil.dpi2px(getContext(), DEFAULT_HEIGHT), heightMeasureSpec);
         setMeasuredDimension(width, height);
     }
 
@@ -198,11 +170,22 @@ public class ArcProgressView extends View {
         }
     }
 
+    /**
+     * 设置最大进度
+     *
+     * @param maxProgress
+     */
     public void setMaxProgress(float maxProgress) {
         this.mMaxProgress = maxProgress;
         k = SWEEP_ANGLE / maxProgress;
     }
 
+    /**
+     * 设置上次进度和当前进度
+     *
+     * @param lastProgress
+     * @param currentProgress
+     */
     public void setProgress(float lastProgress, float currentProgress) {
         if (currentProgress > mMaxProgress) {
             currentProgress = mMaxProgress;
@@ -225,6 +208,10 @@ public class ArcProgressView extends View {
 
     public void setOnValueChangeListener(OnValueChangeListener valueChangeListener) {
         this.valueChangeListener = valueChangeListener;
+    }
+
+    public interface OnValueChangeListener {
+        void onValueChange(float value);
     }
 
 }

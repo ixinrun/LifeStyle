@@ -3,11 +3,11 @@ package com.ixinrun.lifestyle.common.base;
 import com.ixinrun.base.activity.BaseFragment;
 
 /**
- * 功能描述:
+ * 描述: 项目Fragment基类，所有fragment需继承此类。
  * </p>
  *
- * @author xinrun
- * @data 2021/4/1
+ * @author ixinrun
+ * @date 2021/4/1
  */
 public abstract class BaseLsFrag extends BaseFragment {
 

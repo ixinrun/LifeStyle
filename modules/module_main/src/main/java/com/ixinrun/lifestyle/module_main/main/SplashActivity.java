@@ -30,7 +30,7 @@ public class SplashActivity extends BaseLsAct {
 
         AlphaAnimation anim1 = new AlphaAnimation(0.5f, 1f);
         anim1.setInterpolator(new AccelerateInterpolator());
-        anim1.setDuration(1600);
+        anim1.setDuration(1400);
         smallWord.startAnimation(anim1);
     }
 
