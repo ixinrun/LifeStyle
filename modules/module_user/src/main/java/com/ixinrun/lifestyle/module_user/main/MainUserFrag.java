@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,8 @@ import androidx.annotation.Nullable;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.base.img.ImageLoaderMgr;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
+import com.ixinrun.lifestyle.common.data.UserInfoBean;
+import com.ixinrun.lifestyle.common.mgr.StorageMgr;
 import com.ixinrun.lifestyle.common.router.RouterConfig;
 import com.ixinrun.lifestyle.module_user.R;
 import com.ixinrun.lifestyle.module_user.setting.SettingActivity;
@@ -20,20 +23,28 @@ import com.ixinrun.lifestyle.module_user.setting.SettingActivity;
 @Route(path = RouterConfig.ModuleUser.MainUserFrag)
 public class MainUserFrag extends BaseLsFrag {
 
-    private ImageView mUserTopIv;
+    private ImageView mUserPhotoIv;
     private ImageView mUserHeadIv;
     private TextView mUserNameTv;
-    private TextView mUserAphorismTv;
+    private TextView mUserMottoTv;
     private ImageView mSettingIv;
+    private RelativeLayout mUserWeightRl;
+    private TextView mUserWeightTv;
+    private RelativeLayout mUserHeightRl;
+    private TextView mUserHeightTv;
 
     @Override
     protected View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
         View view = inflater.inflate(R.layout.main_user_frag_layout, null);
-        mUserTopIv = view.findViewById(R.id.user_top_iv);
+        mUserPhotoIv = view.findViewById(R.id.user_photo_iv);
         mUserHeadIv = view.findViewById(R.id.user_head_iv);
         mUserNameTv = view.findViewById(R.id.user_name_tv);
-        mUserAphorismTv = view.findViewById(R.id.user_aphorism_tv);
+        mUserMottoTv = view.findViewById(R.id.user_motto_tv);
         mSettingIv = view.findViewById(R.id.setting_iv);
+        mUserWeightRl = view.findViewById(R.id.user_weight_rl);
+        mUserWeightTv = view.findViewById(R.id.user_weight_tv);
+        mUserHeightRl = view.findViewById(R.id.user_height_rl);
+        mUserHeightTv = view.findViewById(R.id.user_height_tv);
 
         return view;
     }
@@ -46,11 +57,14 @@ public class MainUserFrag extends BaseLsFrag {
 
     @Override
     protected void loadData(@Nullable Bundle savedInstanceState) {
-        String topImgUrl = "https://api.kdcc.cn/img/";
-        ImageLoaderMgr.getInstance().load(topImgUrl, mUserTopIv);
+        UserInfoBean userInfo = StorageMgr.User.getUserInfo();
 
-        String headerImgUrl = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201512%2F05%2F20151205155108_tXrxZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620908007&t=aa9b1e9c4466076022aa492c5ad91e8e";
-        ImageLoaderMgr.getInstance().load(headerImgUrl, mUserHeadIv);
+        ImageLoaderMgr.getInstance().load(userInfo.getPhoto(), mUserPhotoIv);
+        ImageLoaderMgr.getInstance().load(userInfo.getHead(), mUserHeadIv);
+        mUserNameTv.setText(userInfo.getUserName());
+        mUserMottoTv.setText(userInfo.getMotto());
+        mUserWeightTv.setText(userInfo.getWeight() + " kg");
+        mUserHeightTv.setText(userInfo.getHeight() + " cm");
     }
 
     public static MainUserFrag newInstance() {

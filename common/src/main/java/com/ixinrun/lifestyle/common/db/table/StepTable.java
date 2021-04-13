@@ -2,6 +2,7 @@ package com.ixinrun.lifestyle.common.db.table;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 /**
@@ -14,32 +15,19 @@ import androidx.room.PrimaryKey;
 @Entity
 public class StepTable {
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(typeAffinity = ColumnInfo.INTEGER)
     private int id;
-    @ColumnInfo(typeAffinity = ColumnInfo.INTEGER)
     private int stepNum;
-    @ColumnInfo(typeAffinity = ColumnInfo.INTEGER)
     private int stepNumTarget;
-    @ColumnInfo(typeAffinity = ColumnInfo.REAL)
     private float kc;
-    @ColumnInfo(typeAffinity = ColumnInfo.REAL)
     private float km;
-    @ColumnInfo(typeAffinity = ColumnInfo.TEXT)
     private String date;
-    @ColumnInfo(typeAffinity = ColumnInfo.INTEGER)
     private boolean isPass;
-    @ColumnInfo(typeAffinity = ColumnInfo.TEXT)
     private String remark;
 
-    public StepTable(int id, int stepNum, int stepNumTarget, float kc, float km, String date, boolean isPass, String remark) {
-        this.id = id;
+    public StepTable(int stepNum, int stepNumTarget, String date) {
         this.stepNum = stepNum;
         this.stepNumTarget = stepNumTarget;
-        this.kc = kc;
-        this.km = km;
         this.date = date;
-        this.isPass = isPass;
-        this.remark = remark;
     }
 
     public int getId() {

@@ -39,7 +39,6 @@ public class StepView extends FrameLayout {
     public StepView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView();
-        loadData();
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -150,7 +149,7 @@ public class StepView extends FrameLayout {
         }
     }
 
-    static class StepBean {
+    public static class StepBean {
         private int stepCount;
         private int lastStepCount;
         private int targetStepCount;
@@ -180,19 +179,9 @@ public class StepView extends FrameLayout {
         }
     }
 
-    private void loadData() {
-        StepBean b = new StepBean();
-        b.setStepCount(3000);
-        b.setLastStepCount(0);
-        b.setTargetStepCount(10000);
-        mDaySteps.add(b);
-
-        StepBean b1 = new StepBean();
-        b1.setStepCount(0);
-        b1.setLastStepCount(0);
-        b1.setTargetStepCount(10000);
-        mDaySteps.add(b1);
-
+    public void setDatas(List<StepBean> b) {
+        mDaySteps.clear();
+        mDaySteps.addAll(b);
         mStepVpAdapter.setData(mDaySteps);
         mStepVp.setCurrentItem(mDaySteps.size() - 1);
     }

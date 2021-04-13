@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Query;
 
 import com.ixinrun.lifestyle.common.db.BaseDao;
+import com.ixinrun.lifestyle.common.db.table.StepTable;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @date 2021/4/13
  */
 @Dao
-public interface StepDao extends BaseDao<StepDao> {
+public interface StepDao extends BaseDao<StepTable> {
 
     /**
      * 查询所有
@@ -23,14 +24,20 @@ public interface StepDao extends BaseDao<StepDao> {
      * @return 返回多条数据
      */
     @Query("SELECT * FROM StepTable")
-    List<StepDao> getAllData();
+    List<StepTable> getAllData();
+//
+//    /**
+//     * 单个查询
+//     *
+//     * @param id
+//     * @return 返回单条数据
+//     */
+//    @Query("SELECT * FROM StepTable WHERE id = :id")
+//    StepDao getStepTableById(int id);
 
-    /**
-     * 单个查询
-     *
-     * @param id
-     * @return 返回单条数据
-     */
-    @Query("SELECT * FROM StepTable WHERE id = :id")
-    StepDao getStudentById(int id);
+//    /**
+//     * 清空表
+//     */
+//    @Query("DELETE FROM StepTable")
+//    StepDao cleanTable();
 }

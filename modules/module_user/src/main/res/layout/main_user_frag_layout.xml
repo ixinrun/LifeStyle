@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
@@ -18,7 +19,7 @@
             android:paddingBottom="10dp">
 
             <ImageView
-                android:id="@+id/user_top_iv"
+                android:id="@+id/user_photo_iv"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_marginBottom="20dp"
@@ -29,7 +30,7 @@
                 android:id="@+id/user_head_iv"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_alignBottom="@id/user_top_iv"
+                android:layout_alignBottom="@id/user_photo_iv"
                 android:layout_marginStart="@dimen/content_margin"
                 android:layout_marginBottom="-20dp"
                 android:background="@color/color_white"
@@ -43,7 +44,7 @@
                 android:id="@+id/user_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/user_top_iv"
+                android:layout_alignBottom="@id/user_photo_iv"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_toRightOf="@id/user_head_iv"
@@ -53,10 +54,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/user_aphorism_tv"
+                android:id="@+id/user_motto_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/user_top_iv"
+                android:layout_below="@id/user_photo_iv"
                 android:layout_marginStart="@dimen/content_margin"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/content_margin"
@@ -86,6 +87,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/user_weight_rl"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:paddingLeft="@dimen/content_padding"
@@ -100,15 +102,16 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/user_weight_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="30dp"
-                    android:text="64 kg"
                     android:textColor="@color/text_color_black_medium"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="64 kg" />
 
                 <ImageView
                     android:layout_width="16dp"
@@ -125,6 +128,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/user_height_rl"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:paddingLeft="@dimen/content_padding"
@@ -139,15 +143,16 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/user_height_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="30dp"
-                    android:text="178 cm"
                     android:textColor="@color/text_color_black_medium"
                     android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="178 cm" />
 
                 <ImageView
                     android:layout_width="16dp"

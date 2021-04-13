@@ -7,8 +7,16 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
+import com.ixinrun.base.other.ThreadPoolExecutor;
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
+import com.ixinrun.lifestyle.common.data.UserInfoBean;
+import com.ixinrun.lifestyle.common.db.AppDatabase;
+import com.ixinrun.lifestyle.common.db.dao.StepDao;
+import com.ixinrun.lifestyle.common.db.table.StepTable;
+import com.ixinrun.lifestyle.common.mgr.StorageMgr;
 import com.ixinrun.lifestyle.module_main.R;
+
+import java.util.Random;
 
 public class SplashActivity extends BaseLsAct {
 
@@ -36,6 +44,14 @@ public class SplashActivity extends BaseLsAct {
 
     @Override
     protected void loadData(Bundle savedInstanceState) {
+        new ThreadPoolExecutor(ThreadPoolExecutor.Type.SingleThread, 1).execute(new Runnable() {
+            @Override
+            public void run() {
+                initUserInfo();
+                initDb();
+            }
+        });
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -45,5 +61,32 @@ public class SplashActivity extends BaseLsAct {
                 finish();
             }
         }, 2000);
+    }
+
+    private void initUserInfo() {
+        UserInfoBean b = new UserInfoBean();
+        b.setUserId("0000");
+        b.setUserName("i猩人");
+        b.setGender("男");
+        b.setBirthday("1991-01-01");
+        b.setPhoto("https://api.kdcc.cn/img/");
+        b.setHead("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3649178992,1821853682&fm=26&gp=0.jpg");
+        b.setMotto("为梦想而奋斗!");
+        b.setHeight(178);
+        b.setWeight(64);
+
+        StorageMgr.User.put(StorageMgr.User.USER_INFO, b);
+    }
+
+    private void initDb() {
+        StepDao dao = AppDatabase.getInstance(mContext).stepDao();
+//        dao.cleanTable();
+        for (int i = 0; i < 7; i++) {
+            StepTable table = new StepTable(
+                    new Random().nextInt(10000),
+                    new Random().nextInt(1000) + 9000,
+                    "2021-04-1" + i);
+            dao.insertItem(table);
+        }
     }
 }

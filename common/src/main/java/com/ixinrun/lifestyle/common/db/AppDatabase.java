@@ -20,7 +20,7 @@ import com.ixinrun.lifestyle.common.db.table.StepTable;
  * @author ixinrun
  * @date 2021/4/13
  */
-@Database(entities = {StepTable.class}, version = 1)
+@Database(entities = {StepTable.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME = "lifestyle_db";
@@ -51,9 +51,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
     @Override
     public void clearAllTables() {
-
     }
 
-    public abstract StepDao studentDao();
+    public abstract StepDao stepDao();
 
 }

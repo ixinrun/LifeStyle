@@ -46,4 +46,7 @@ dependencies {
 
     // 路由
     api rootProject.ext.dependencies.arouter_api
+
+    // 注解
+    annotationProcessor rootProject.ext.dependencies.room_compiler
 }

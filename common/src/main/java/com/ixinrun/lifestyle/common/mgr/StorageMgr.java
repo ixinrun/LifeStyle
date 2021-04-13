@@ -1,6 +1,7 @@
 package com.ixinrun.lifestyle.common.mgr;
 
 import com.ixinrun.base.utils.SPUtil;
+import com.ixinrun.lifestyle.common.data.UserInfoBean;
 
 /**
  * 描述: 本地存储管理器
@@ -14,7 +15,7 @@ public class StorageMgr {
     /**
      * 全局存储
      */
-    static class Global {
+    public static class Global {
         /**
          * LS_GLOBAL 全局表
          * FIRST_LAUNCH 第一次启动
@@ -30,7 +31,7 @@ public class StorageMgr {
          * @param key   key，such as “StorageMgr.Global.FIRST_LAUNCH”
          * @param value value
          */
-        public static void setGlobal(String key, Object value) {
+        public static void put(String key, Object value) {
             SPUtil.applyPut(LS_GLOBAL, key, value);
         }
     }
@@ -38,7 +39,7 @@ public class StorageMgr {
     /**
      * 用户相关存储
      */
-    static class User {
+    public static class User {
         /**
          * LS_USER 用户表
          * USER_INFO 用户信息
@@ -52,9 +53,18 @@ public class StorageMgr {
          * @param key   key，such as “StorageMgr.User.USER_INFO”
          * @param value value
          */
-        public static boolean setStoreUser(String key, Object value) {
+        public static boolean put(String key, Object value) {
             SPUtil.applyPut(LS_USER, key, value);
             return true;
+        }
+
+        /**
+         * 获取用户信息
+         *
+         * @return
+         */
+        public static UserInfoBean getUserInfo() {
+            return SPUtil.get(LS_USER, USER_INFO, UserInfoBean.class);
         }
     }
 
