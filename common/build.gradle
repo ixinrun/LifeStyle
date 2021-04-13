@@ -38,7 +38,6 @@ dependencies {
     androidTestApi rootProject.ext.dependencies.test_espresso
     // dependencies
     api rootProject.ext.dependencies.module_base
-    api rootProject.ext.dependencies.material
     api rootProject.ext.dependencies.constraintlayout
     api rootProject.ext.dependencies.viewmodel
     api rootProject.ext.dependencies.livedata

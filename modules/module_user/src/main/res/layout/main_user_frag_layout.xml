@@ -47,7 +47,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"
                 android:layout_toRightOf="@id/user_head_iv"
-                android:text="i猩人"
+                android:text="ixinrun"
                 android:textColor="@color/color_white"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -144,7 +144,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="30dp"
-                    android:text="180 cm"
+                    android:text="178 cm"
                     android:textColor="@color/text_color_black_medium"
                     android:textSize="16dp"
                     android:textStyle="bold" />

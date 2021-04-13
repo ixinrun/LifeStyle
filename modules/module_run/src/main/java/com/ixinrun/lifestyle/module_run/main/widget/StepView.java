@@ -13,8 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.ixinrun.lifestyle.common.base.adapter.BaseRecycleHolder;
-import com.ixinrun.lifestyle.common.base.adapter.SingleTypeAdapter;
+import com.ixinrun.base.widget.adapter.BaseRecycleHolder;
+import com.ixinrun.base.widget.adapter.SingleTypeAdapter;
 import com.ixinrun.lifestyle.module_run.R;
 
 import java.util.ArrayList;

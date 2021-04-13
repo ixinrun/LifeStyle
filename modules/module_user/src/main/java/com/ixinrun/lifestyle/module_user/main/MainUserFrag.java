@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.base.img.ImageLoaderMgr;
@@ -40,21 +39,18 @@ public class MainUserFrag extends BaseLsFrag {
     }
 
     @Override
+    protected void initEvent() {
+        super.initEvent();
+        mSettingIv.setOnClickListener(v -> SettingActivity.startActivity(mContext));
+    }
+
+    @Override
     protected void loadData(@Nullable Bundle savedInstanceState) {
-        mSettingIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SettingActivity.startActivity(mContext);
-            }
-        });
+        String topImgUrl = "https://api.kdcc.cn/img/";
+        ImageLoaderMgr.getInstance().load(topImgUrl, mUserTopIv);
 
-        String imgUrl = "https://api.kdcc.cn/img/";
-        ImageLoaderMgr.getInstance()
-                .builder()
-                .thumbnail(0.1f)
-                .build()
-                .load(imgUrl, mUserTopIv);
-
+        String headerImgUrl = "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201512%2F05%2F20151205155108_tXrxZ.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1620908007&t=aa9b1e9c4466076022aa492c5ad91e8e";
+        ImageLoaderMgr.getInstance().load(headerImgUrl, mUserHeadIv);
     }
 
     public static MainUserFrag newInstance() {
