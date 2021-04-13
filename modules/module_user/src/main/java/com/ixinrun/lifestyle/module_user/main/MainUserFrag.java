@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.base.img.ImageLoaderMgr;
