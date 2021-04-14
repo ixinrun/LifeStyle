@@ -43,7 +43,7 @@ public class StepView extends FrameLayout {
 
     @SuppressLint("UseCompatLoadingForDrawables")
     private void initView() {
-        View view = View.inflate(getContext(), R.layout.main_run_walking_layout, this);
+        View view = View.inflate(getContext(), R.layout.main_run_step_layout, this);
         mRunningIv = view.findViewById(R.id.running_iv);
         mDateTv = view.findViewById(R.id.date_tv);
         mShareIv = view.findViewById(R.id.share_iv);
@@ -93,10 +93,10 @@ public class StepView extends FrameLayout {
         @Override
         public void onBindView(BaseRecycleHolder holder, StepBean b, int position, int viewType) {
             ArcProgressView stepProgressView = holder.getView(R.id.step_progress_view);
-            TextView stepCountTv = holder.getView(R.id.step_count_tv);
+            TextView stepCountTv = holder.getView(R.id.step_num_tv);
             TextView calorieTv = holder.getView(R.id.calorie_tv);
             TextView distanceTv = holder.getView(R.id.distance_tv);
-            TextView targetStepCountTv = holder.getView(R.id.target_step_count_tv);
+            TextView targetStepCountTv = holder.getView(R.id.step_num_target_tv);
 
             stepProgressView.setMaxProgress(b.getTargetStepCount());
             stepProgressView.setProgress(b.getLastStepCount(), b.getStepCount());

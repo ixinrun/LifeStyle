@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f8f8f8"
@@ -38,13 +39,14 @@
                     android:textSize="12dp" />
 
                 <TextView
+                    android:id="@+id/day_step_num_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="6871"
                     android:textColor="@color/text_color_black_medium"
                     android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="6871" />
             </LinearLayout>
 
             <View
@@ -67,13 +69,14 @@
                     android:textSize="12dp" />
 
                 <TextView
+                    android:id="@+id/total_mail_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="6871"
                     android:textColor="@color/text_color_black_medium"
                     android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="6871" />
             </LinearLayout>
 
             <View
@@ -96,16 +99,23 @@
                     android:textSize="12dp" />
 
                 <TextView
+                    android:id="@+id/pass_days_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="6871"
                     android:textColor="@color/text_color_black_medium"
                     android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:text="6871" />
             </LinearLayout>
 
         </LinearLayout>
+
+        <com.ixinrun.lifestyle.module_run.main.widget.StepChartView
+            android:id="@+id/step_chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

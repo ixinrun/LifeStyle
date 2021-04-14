@@ -23,7 +23,7 @@ public interface StepDao extends BaseDao<StepTable> {
      *
      * @return 返回多条数据
      */
-    @Query("SELECT * FROM StepTable")
+    @Query("SELECT * FROM step_table")
     List<StepTable> getAllData();
 
     /**
@@ -32,12 +32,12 @@ public interface StepDao extends BaseDao<StepTable> {
      * @param id
      * @return 返回单条数据
      */
-    @Query("SELECT * FROM StepTable WHERE id = :id")
+    @Query("SELECT * FROM step_table WHERE id = :id")
     StepTable getStepTableById(int id);
 
     /**
      * 清空表
      */
-    @Query("DELETE FROM StepTable")
+    @Query("DELETE FROM step_table")
     void cleanTable();
 }

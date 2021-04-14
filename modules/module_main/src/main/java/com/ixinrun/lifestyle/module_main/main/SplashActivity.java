@@ -85,6 +85,8 @@ public class SplashActivity extends BaseLsAct {
             table.setStepNum(new Random().nextInt(10000));
             table.setStepNumTarget(new Random().nextInt(1000) + 9000);
             table.setDate("2021-04-1" + i);
+            table.setPass(i / 2 == 0);
+            table.setKm(new Random().nextInt(10));
             dao.insertItem(table);
         }
     }

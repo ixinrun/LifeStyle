@@ -11,7 +11,7 @@ import androidx.room.PrimaryKey;
  * @author ixinrun
  * @date 2021/4/13
  */
-@Entity
+@Entity(tableName = "step_table")
 public class StepTable {
     @PrimaryKey(autoGenerate = true)
     private int id;
