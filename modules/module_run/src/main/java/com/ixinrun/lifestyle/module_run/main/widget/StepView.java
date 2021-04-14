@@ -183,7 +183,7 @@ public class StepView extends FrameLayout {
         mDaySteps.clear();
         mDaySteps.addAll(b);
         mStepVpAdapter.setData(mDaySteps);
-        mStepVp.setCurrentItem(mDaySteps.size() - 1);
+        mStepVp.setCurrentItem(mDaySteps.size() - 1, false);
     }
 
     /**

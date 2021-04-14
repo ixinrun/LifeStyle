@@ -25,19 +25,19 @@ public interface StepDao extends BaseDao<StepTable> {
      */
     @Query("SELECT * FROM StepTable")
     List<StepTable> getAllData();
-//
-//    /**
-//     * 单个查询
-//     *
-//     * @param id
-//     * @return 返回单条数据
-//     */
-//    @Query("SELECT * FROM StepTable WHERE id = :id")
-//    StepDao getStepTableById(int id);
 
-//    /**
-//     * 清空表
-//     */
-//    @Query("DELETE FROM StepTable")
-//    StepDao cleanTable();
+    /**
+     * 单个查询
+     *
+     * @param id
+     * @return 返回单条数据
+     */
+    @Query("SELECT * FROM StepTable WHERE id = :id")
+    StepTable getStepTableById(int id);
+
+    /**
+     * 清空表
+     */
+    @Query("DELETE FROM StepTable")
+    void cleanTable();
 }

@@ -61,11 +61,11 @@ public class MainRunFrag extends BaseLsFrag {
             StepDao dao = AppDatabase.getInstance(mContext).stepDao();
             List<StepTable> tables = dao.getAllData();
             if (tables != null) {
-
                 for (StepTable t : tables) {
                     StepView.StepBean b = new StepView.StepBean();
                     b.setStepCount(t.getStepNum());
                     b.setTargetStepCount(t.getStepNumTarget());
+                    list.add(b);
                 }
             }
             return list;

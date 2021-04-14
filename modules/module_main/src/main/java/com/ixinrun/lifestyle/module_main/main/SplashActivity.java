@@ -7,7 +7,6 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
-import com.ixinrun.base.other.ThreadPoolExecutor;
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.common.data.UserInfoBean;
 import com.ixinrun.lifestyle.common.db.AppDatabase;
@@ -44,13 +43,13 @@ public class SplashActivity extends BaseLsAct {
 
     @Override
     protected void loadData(Bundle savedInstanceState) {
-        new ThreadPoolExecutor(ThreadPoolExecutor.Type.SingleThread, 1).execute(new Runnable() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 initUserInfo();
                 initDb();
             }
-        });
+        }).start();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -80,12 +79,12 @@ public class SplashActivity extends BaseLsAct {
 
     private void initDb() {
         StepDao dao = AppDatabase.getInstance(mContext).stepDao();
-//        dao.cleanTable();
+        dao.cleanTable();
         for (int i = 0; i < 7; i++) {
-            StepTable table = new StepTable(
-                    new Random().nextInt(10000),
-                    new Random().nextInt(1000) + 9000,
-                    "2021-04-1" + i);
+            StepTable table = new StepTable();
+            table.setStepNum(new Random().nextInt(10000));
+            table.setStepNumTarget(new Random().nextInt(1000) + 9000);
+            table.setDate("2021-04-1" + i);
             dao.insertItem(table);
         }
     }
