@@ -15,7 +15,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
 import com.ixinrun.lifestyle.common.db.AppDatabase;
 import com.ixinrun.lifestyle.common.db.dao.StepDao;
-import com.ixinrun.lifestyle.common.db.table.StepTable;
+import com.ixinrun.lifestyle.common.db.table.DbStepInfo;
 import com.ixinrun.lifestyle.common.router.RouterConfig;
 import com.ixinrun.lifestyle.common.widget.LiveDataBus;
 import com.ixinrun.lifestyle.module_run.R;
@@ -57,6 +57,8 @@ public class MainRunFrag extends BaseLsFrag {
                         mStepView.setStepCount(integer);
                     }
                 });
+
+        tip("准备好了吗？");
     }
 
     private class QueryTask extends AsyncTask<Void, Void, Void> {
@@ -64,7 +66,7 @@ public class MainRunFrag extends BaseLsFrag {
         public QueryTask() {
         }
 
-        private List<StepTable> tables;
+        private List<DbStepInfo> tables;
         private List<StepView.StepBean> steps;
         private int dayStepNum;
         private int totalMail;
@@ -78,7 +80,7 @@ public class MainRunFrag extends BaseLsFrag {
                 steps = new ArrayList<>();
 
                 int totalStepNum = 0;
-                for (StepTable t : tables) {
+                for (DbStepInfo t : tables) {
                     StepView.StepBean b = new StepView.StepBean();
                     b.setStepCount(t.getStepNum());
                     b.setTargetStepCount(t.getStepNumTarget());

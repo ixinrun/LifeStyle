@@ -11,7 +11,7 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 import com.ixinrun.lifestyle.common.db.dao.StepDao;
-import com.ixinrun.lifestyle.common.db.table.StepTable;
+import com.ixinrun.lifestyle.common.db.table.DbStepInfo;
 
 /**
  * 描述: App全局数据库
@@ -20,7 +20,7 @@ import com.ixinrun.lifestyle.common.db.table.StepTable;
  * @author ixinrun
  * @date 2021/4/13
  */
-@Database(entities = {StepTable.class}, version = 1, exportSchema = false)
+@Database(entities = {DbStepInfo.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME = "lifestyle_db";

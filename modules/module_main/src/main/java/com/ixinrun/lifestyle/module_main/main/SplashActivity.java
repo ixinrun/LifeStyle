@@ -11,7 +11,7 @@ import com.ixinrun.lifestyle.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.common.data.UserInfoBean;
 import com.ixinrun.lifestyle.common.db.AppDatabase;
 import com.ixinrun.lifestyle.common.db.dao.StepDao;
-import com.ixinrun.lifestyle.common.db.table.StepTable;
+import com.ixinrun.lifestyle.common.db.table.DbStepInfo;
 import com.ixinrun.lifestyle.common.mgr.StorageMgr;
 import com.ixinrun.lifestyle.module_main.R;
 
@@ -81,7 +81,7 @@ public class SplashActivity extends BaseLsAct {
         StepDao dao = AppDatabase.getInstance(mContext).stepDao();
         dao.cleanTable();
         for (int i = 0; i < 7; i++) {
-            StepTable table = new StepTable();
+            DbStepInfo table = new DbStepInfo();
             table.setStepNum(new Random().nextInt(10000));
             table.setStepNumTarget(new Random().nextInt(1000) + 9000);
             table.setDate("2021-04-1" + i);

@@ -2,11 +2,13 @@ package com.ixinrun.lifestyle.module_run.main.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +19,6 @@ import com.ixinrun.base.widget.adapter.BaseRecycleHolder;
 import com.ixinrun.base.widget.adapter.SingleTypeAdapter;
 import com.ixinrun.lifestyle.module_run.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class StepView extends FrameLayout {
@@ -25,11 +26,10 @@ public class StepView extends FrameLayout {
     private ImageView mRunningIv;
     private TextView mDateTv;
     private ImageView mShareIv;
-
     private ViewPager2 mStepVp;
-    private SingleTypeAdapter mStepVpAdapter;
-    private List<StepBean> mDaySteps = new ArrayList<>();
+    private LinearLayout mIndicatorLl;
 
+    private SingleTypeAdapter mStepVpAdapter;
     private boolean mIsRunning;
 
     public StepView(@NonNull Context context) {
@@ -47,8 +47,9 @@ public class StepView extends FrameLayout {
         mRunningIv = view.findViewById(R.id.running_iv);
         mDateTv = view.findViewById(R.id.date_tv);
         mShareIv = view.findViewById(R.id.share_iv);
-
         mStepVp = view.findViewById(R.id.step_vp);
+        mIndicatorLl = view.findViewById(R.id.indicator_ll);
+
         mStepVpAdapter = new StepVpAdapter(getContext());
         mStepVp.setAdapter(mStepVpAdapter);
         mStepVp.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
@@ -59,6 +60,7 @@ public class StepView extends FrameLayout {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
+                // 标题
                 if (position == mStepVpAdapter.getItemCount() - 1) {
                     startStepAnimal(mIsRunning);
                     mDateTv.setText("今天");
@@ -66,6 +68,12 @@ public class StepView extends FrameLayout {
                     mRunningIv.setImageDrawable(getResources().getDrawable(R.drawable.run_status_stop));
                     mDateTv.setText("昨日");
                 }
+
+                // 指示器
+                for (int i = 0; i < mIndicatorLl.getChildCount(); i++) {
+                    ((TextView) mIndicatorLl.getChildAt(i)).setTextColor(Color.LTGRAY);
+                }
+                ((TextView) mIndicatorLl.getChildAt(position)).setTextColor(Color.WHITE);
             }
 
             private void startStepAnimal(boolean isRunning) {
@@ -179,11 +187,21 @@ public class StepView extends FrameLayout {
         }
     }
 
-    public void setDatas(List<StepBean> b) {
-        mDaySteps.clear();
-        mDaySteps.addAll(b);
-        mStepVpAdapter.setData(mDaySteps);
-        mStepVp.setCurrentItem(mDaySteps.size() - 1, false);
+    public void setDatas(List<StepBean> list) {
+        // 设置指示器
+        mIndicatorLl.removeAllViews();
+        for (int i = 0; i < list.size(); i++) {
+            TextView tv = new TextView(getContext());
+            tv.setText("●");
+            tv.setTextSize(6);
+            tv.setTextColor(Color.LTGRAY);
+            tv.setPadding(12, 0, 12, 0);
+            mIndicatorLl.addView(tv);
+        }
+
+        // 填充步数数据
+        mStepVpAdapter.setData(list);
+        mStepVp.setCurrentItem(list.size() - 1, false);
     }
 
     /**

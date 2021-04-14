@@ -11,8 +11,8 @@ import androidx.room.PrimaryKey;
  * @author ixinrun
  * @date 2021/4/13
  */
-@Entity(tableName = "step_table")
-public class StepTable {
+@Entity
+public class DbStepInfo {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private int stepNum;
@@ -23,7 +23,7 @@ public class StepTable {
     private boolean isPass;
     private String remark;
 
-    public StepTable(int id, int stepNum, int stepNumTarget, float kc, float km, String date, boolean isPass, String remark) {
+    public DbStepInfo(int id, int stepNum, int stepNumTarget, float kc, float km, String date, boolean isPass, String remark) {
         this.id = id;
         this.stepNum = stepNum;
         this.stepNumTarget = stepNumTarget;
@@ -35,7 +35,7 @@ public class StepTable {
     }
 
     @Ignore
-    public StepTable() {
+    public DbStepInfo() {
     }
 
     public int getId() {

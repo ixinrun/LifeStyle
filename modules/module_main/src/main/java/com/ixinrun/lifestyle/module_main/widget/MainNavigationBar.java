@@ -31,11 +31,10 @@ public class MainNavigationBar extends LinearLayout {
     private final List<NavigationItem> mItems = new ArrayList<>();
     private TabSwitchCallback mCallback;
 
-    private int tabResSize = 27;
-    private int tagTextSize = 12;
+    private int tabResSize = 24;
+    private int tagTextSize = 10;
     private int tabTextColor0 = Color.GRAY;
     private int tabTextColor1 = Color.DKGRAY;
-
 
     public MainNavigationBar(Context context) {
         super(context);
@@ -101,7 +100,7 @@ public class MainNavigationBar extends LinearLayout {
             LayoutParams lp = new LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
-            lp.setMargins(0, dp2px(6), 0, 0);
+            lp.setMargins(0, dp2px(5), 0, 0);
             mNavTv.setLayoutParams(lp);
 
             if (!TextUtils.isEmpty(tabName)) {
