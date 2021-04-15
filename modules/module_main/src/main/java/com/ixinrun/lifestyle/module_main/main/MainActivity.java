@@ -11,8 +11,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.ixinrun.base.utils.ScreenUtil;
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.common.router.RouterConfig;
+import com.ixinrun.lifestyle.common.widget.float_view.FloatViewMgr;
 import com.ixinrun.lifestyle.module_main.R;
 import com.ixinrun.lifestyle.module_main.widget.MainNavigationBar;
 
@@ -46,6 +48,22 @@ public class MainActivity extends BaseLsAct {
                 .addTab(R.drawable.main_bottom_user_a, R.drawable.main_bottom_user_b, null);
 
         mFragMgr = getSupportFragmentManager();
+
+        //配置悬浮球
+        FloatViewMgr.getInstance()
+                .getFloatView()
+                .setView(R.drawable.float_ball_ic, 20, 20)
+                .setStartPosition(ScreenUtil.getScreenWidth(), (int) (ScreenUtil.getScreenHeight() * 0.8))
+                .setAttachEdge(true)
+                .setFloatViewClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        tip("你点击了悬浮球");
+                    }
+                });
+
+        //开启悬浮球
+        FloatViewMgr.getInstance().open();
     }
 
     @Override

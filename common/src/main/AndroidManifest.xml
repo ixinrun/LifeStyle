@@ -5,14 +5,11 @@
     <!-- 前台服务权限 -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-    <application>
+    <!--悬浮窗-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
 
-        <activity
-            android:name=".base.keep_alive.OnePixelActivity"
-            android:excludeFromRecents="true"
-            android:finishOnTaskLaunch="false"
-            android:launchMode="singleInstance"
-            android:theme="@style/OnePixelActivityTheme" />
+    <application>
 
     </application>
 

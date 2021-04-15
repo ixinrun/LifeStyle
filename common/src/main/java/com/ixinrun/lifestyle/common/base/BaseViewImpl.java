@@ -1,6 +1,7 @@
 package com.ixinrun.lifestyle.common.base;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -39,7 +40,7 @@ public class BaseViewImpl implements IBaseView {
 
     @Override
     public void tip(@NonNull String msg) {
-
+        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override

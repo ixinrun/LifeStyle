@@ -26,8 +26,8 @@ ext {
             junit           : "junit:junit:4.13.2",
             test_ext        : "androidx.test.ext:junit:1.1.2",
             test_espresso   : "androidx.test.espresso:espresso-core:3.3.0",
-            module_base     : "com.github.ixinrun:MyApp:1.2",
             constraintlayout: "androidx.constraintlayout:constraintlayout:2.0.4",
+            module_base     : "com.github.ixinrun:MyApp:1.2",
             // 路由
             arouter_api     : "com.alibaba:arouter-api:1.5.1",
             arouter_compiler: "com.alibaba:arouter-compiler:1.5.1",
