@@ -99,10 +99,10 @@ public class StepChartView extends FrameLayout {
         // 启用左y轴
         yAxisLeft.setEnabled(true);
         // 设置Y轴坐标显示
-        yAxisLeft.setDrawLabels(true);
+        yAxisLeft.setDrawLabels(false);
         // 设置y轴轴线显示
-        yAxisLeft.setDrawAxisLine(true);
-        // 设置X轴轴线粗细
+        yAxisLeft.setDrawAxisLine(false);
+        // 设置y轴轴线粗细
         yAxisLeft.setAxisLineWidth(2);
         yAxisLeft.setAxisLineColor(Color.BLACK);
         // 设置Y轴横向网格线

@@ -39,8 +39,6 @@ dependencies {
     // dependencies
     api rootProject.ext.dependencies.module_base
     api rootProject.ext.dependencies.constraintlayout
-    api rootProject.ext.dependencies.viewmodel
-    api rootProject.ext.dependencies.livedata
     api rootProject.ext.dependencies.room_runtime
     api rootProject.ext.dependencies.MPAndroidChart
 

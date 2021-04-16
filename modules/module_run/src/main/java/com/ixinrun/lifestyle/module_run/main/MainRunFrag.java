@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.lifecycle.Observer;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
 import com.ixinrun.lifestyle.common.db.AppDatabase;
 import com.ixinrun.lifestyle.common.db.dao.StepDao;
@@ -29,20 +30,33 @@ import java.util.List;
 public class MainRunFrag extends BaseLsFrag {
 
     private StepView mStepView;
-    private StepChartView mStepChartView;
     private TextView mDayStepNumTv;
     private TextView mTotalMailTv;
     private TextView mPassDaysTv;
+    private StepChartView mStepChartView;
+    private FloatingActionButton mRunBtn;
 
     @Override
     protected View initView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container) {
-        View view = inflater.inflate(R.layout.main_run_frag_layout, null);
+        View view = inflater.inflate(R.layout.main_run_frag_layout, container, false);
         mStepView = view.findViewById(R.id.step_view);
         mDayStepNumTv = view.findViewById(R.id.day_step_num_tv);
         mTotalMailTv = view.findViewById(R.id.total_mail_tv);
         mPassDaysTv = view.findViewById(R.id.pass_days_tv);
         mStepChartView = view.findViewById(R.id.step_chart_view);
+        mRunBtn = view.findViewById(R.id.run_btn);
         return view;
+    }
+
+    @Override
+    protected void initEvent() {
+        super.initEvent();
+        mRunBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tip("开始跑步！");
+            }
+        });
     }
 
     @Override
