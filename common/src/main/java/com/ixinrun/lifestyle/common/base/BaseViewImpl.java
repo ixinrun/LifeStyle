@@ -59,7 +59,7 @@ public class BaseViewImpl implements IBaseView {
     }
 
     @Override
-    public void onViewDestroy() {
+    public void detachView() {
 
     }
 }

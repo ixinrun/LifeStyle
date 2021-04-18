@@ -52,7 +52,7 @@ public class MainActivity extends BaseLsAct {
         //配置悬浮球
         FloatViewMgr.getInstance()
                 .getFloatView()
-                .setView(R.drawable.float_ball_ic, 20, 20)
+                .setView(R.drawable.float_ball_ic, 10, 10)
                 .setStartPosition(ScreenUtil.getScreenWidth(), (int) (ScreenUtil.getScreenHeight() * 0.8))
                 .setAttachEdge(true)
                 .setFloatViewClickListener(new View.OnClickListener() {
