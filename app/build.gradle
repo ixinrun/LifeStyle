@@ -34,10 +34,10 @@ dependencies {
     println "main组件调试模式：" + isDebug
     // 非调试模式下，集成组件
     if (!isDebug) {
-        implementation project(':modules:module_main')
-        implementation project(':modules:module_run')
-        implementation project(':modules:module_eat')
-        implementation project(':modules:module_more')
-        implementation project(':modules:module_user')
+        implementation project(':module:module_main')
+        implementation project(':module:module_run')
+        implementation project(':module:module_eat')
+        implementation project(':module:module_more')
+        implementation project(':module:module_user')
     }
 }

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ixinrun.lifestyle.module_run.main.widget.StepView
+                android:id="@+id/step_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/theme_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日均步数"
+                        android:textColor="@color/text_color_black_tint"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/day_step_num_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/text_color_black_medium"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        tools:text="6871" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40dp"
+                    android:background="@color/divide_line_color" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总公里数"
+                        android:textColor="@color/text_color_black_tint"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/total_mail_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/text_color_black_medium"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        tools:text="6871" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="40dp"
+                    android:background="@color/divide_line_color" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="达标天数"
+                        android:textColor="@color/text_color_black_tint"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/pass_days_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/text_color_black_medium"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        tools:text="6871" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.ixinrun.lifestyle.module_run.main.widget.StepChartView
+                android:id="@+id/step_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/run_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/run_btn_ic"
+        app:backgroundTint="#FFC107"
+        app:elevation="10dp"
+        app:fabCustomSize="80dp"
+        app:pressedTranslationZ="20dp" />
+
+</RelativeLayout>
+
+

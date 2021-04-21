@@ -236,6 +236,7 @@ public class FloatView extends FrameLayout {
     public FloatView setView(@DrawableRes int resid, int width, int height) {
         removeAllViews();
         ImageView iv = new ImageView(getContext());
+        iv.setBackgroundResource(resid);
         if (width != 0 || height != 0) {
             ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(
                     DensityUtil.dpi2px(getContext(), width),
@@ -243,7 +244,6 @@ public class FloatView extends FrameLayout {
             iv.setLayoutParams(lp);
         }
         addView(iv);
-        setBackgroundResource(resid);
         return this;
     }
 
