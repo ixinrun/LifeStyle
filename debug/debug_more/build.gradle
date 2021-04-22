@@ -7,19 +7,17 @@ android {
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        applicationId rootProject.ext.android.applicationId
+        applicationId "com.ixinrun.lifestyle.debug_more"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -30,9 +28,5 @@ android {
 }
 
 dependencies {
-    implementation project(':common')
-    implementation project(':module:module_run')
-    implementation project(':module:module_eat')
     implementation project(':module:module_more')
-    implementation project(':module:module_user')
 }

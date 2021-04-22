@@ -2,7 +2,6 @@ include ':app'
 include ':common'
 
 // modules
-include ':module:module_main'
 include ':module:module_run'
 include ':module:module_eat'
 include ':module:module_more'
@@ -11,4 +10,5 @@ include ':module:module_user'
 // debug
 include ':debug:debug_run'
 include ':debug:debug_eat'
+include ':debug:debug_more'
 include ':debug:debug_user'

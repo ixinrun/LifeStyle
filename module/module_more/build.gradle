@@ -1,8 +1,5 @@
-println "module_more 调试模式：" + isDebug
-if (isDebug) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
 }
 
 android {
@@ -10,9 +7,6 @@ android {
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        if (isDebug){
-            applicationId "com.ixinrun.lifestyle.module_more"
-        }
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode 1
@@ -33,28 +27,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    sourceSets {
-        main {
-            if (isDebug) {
-                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            } else {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-                //集成开发模式下排除debug文件夹中的所有Java文件
-                java {
-                    exclude '**/debug/**'
-                }
-            }
-        }
-    }
 }
 
 dependencies {
-    implementation project(':common')
+    api project(':common')
     //路由注解处理器
     annotationProcessor rootProject.ext.dependencies.arouter_compiler
 }

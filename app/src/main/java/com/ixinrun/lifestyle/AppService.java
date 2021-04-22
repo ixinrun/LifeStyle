@@ -12,7 +12,7 @@ import androidx.core.app.NotificationCompat;
 
 import com.ixinrun.base.bus.LiveDataBus;
 import com.ixinrun.base.service.KeepAliveService;
-import com.ixinrun.lifestyle.module_main.main.MainActivity;
+import com.ixinrun.lifestyle.main.MainActivity;
 import com.ixinrun.lifestyle.module_run.main.util.StepDetector;
 
 /**

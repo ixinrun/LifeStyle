@@ -1,12 +1,4 @@
 ext {
-
-    /**
-     * 组件调试开关
-     * isDebug = true 是组件模块,说明是单独的App
-     * isDebug = false是集成模式,说明是依赖Lib
-     */
-    isDebug = false
-
     /**
      * android闭包配置
      */

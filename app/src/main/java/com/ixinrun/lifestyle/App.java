@@ -9,6 +9,5 @@ public class App extends BaseLsApp {
     @Override
     public void onCreate() {
         super.onCreate();
-        startService(new Intent(this, AppService.class));
     }
 }
