@@ -17,6 +17,6 @@ public class App implements ILsAppCallback {
 
     @Override
     public void init(Application app) {
-        LoggerUtil.i("++++++++++++++++++eat");
+
     }
 }
