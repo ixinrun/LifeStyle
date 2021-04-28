@@ -17,7 +17,7 @@ import com.ixinrun.base.utils.DateUtil;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
 import com.ixinrun.lifestyle.common.data.UserInfoBean;
 import com.ixinrun.lifestyle.common.mgr.StorageMgr;
-import com.ixinrun.lifestyle.common.router.RouterConfig;
+import com.ixinrun.lifestyle.router.RouterConfig;
 import com.ixinrun.lifestyle.module_user.R;
 import com.ixinrun.lifestyle.module_user.setting.SettingActivity;
 

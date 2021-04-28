@@ -18,7 +18,7 @@ import com.ixinrun.lifestyle.common.base.BaseLsFrag;
 import com.ixinrun.lifestyle.common.db.AppDatabase;
 import com.ixinrun.lifestyle.common.db.dao.StepDao;
 import com.ixinrun.lifestyle.common.db.table.DbStepInfo;
-import com.ixinrun.lifestyle.common.router.RouterConfig;
+import com.ixinrun.lifestyle.router.RouterConfig;
 import com.ixinrun.lifestyle.module_run.R;
 import com.ixinrun.lifestyle.module_run.main.widget.StepChartView;
 import com.ixinrun.lifestyle.module_run.main.widget.StepView;

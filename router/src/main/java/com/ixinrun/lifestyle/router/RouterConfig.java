@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.common.router;
+package com.ixinrun.lifestyle.router;
 
 /**
  * 描述: 路由配置

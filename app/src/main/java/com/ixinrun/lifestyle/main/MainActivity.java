@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.ixinrun.lifestyle.R;
 import com.ixinrun.lifestyle.common.base.BaseLsAct;
-import com.ixinrun.lifestyle.common.router.RouterConfig;
+import com.ixinrun.lifestyle.router.RouterConfig;
 import com.ixinrun.lifestyle.widget.MainNavigationBar;
 
 

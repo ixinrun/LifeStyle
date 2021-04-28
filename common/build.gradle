@@ -36,15 +36,16 @@ dependencies {
     testApi rootProject.ext.dependencies.junit
     androidTestApi rootProject.ext.dependencies.test_ext
     androidTestApi rootProject.ext.dependencies.test_espresso
+
     // dependencies
     api rootProject.ext.dependencies.module_base
     api rootProject.ext.dependencies.constraintlayout
+    // 数据库
     api rootProject.ext.dependencies.room_runtime
+    annotationProcessor rootProject.ext.dependencies.room_compiler
+    // 图表
     api rootProject.ext.dependencies.MPAndroidChart
 
-    // 路由
-    api rootProject.ext.dependencies.arouter_api
-
-    // 注解
-    annotationProcessor rootProject.ext.dependencies.room_compiler
+    // 路由配置
+    api project(':router')
 }

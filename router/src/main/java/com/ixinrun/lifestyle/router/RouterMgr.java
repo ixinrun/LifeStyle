@@ -1,4 +1,4 @@
-package com.ixinrun.lifestyle.common.router;
+package com.ixinrun.lifestyle.router;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 
@@ -17,6 +17,5 @@ public class RouterMgr {
     public static void toModuleMain() {
         ARouter.getInstance().build(RouterConfig.ModuleMain.MainActivity).navigation();
     }
-
 
 }

@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.ixinrun.lifestyle.common.base.BaseLsFrag;
-import com.ixinrun.lifestyle.common.router.RouterConfig;
+import com.ixinrun.lifestyle.router.RouterConfig;
 import com.ixinrun.lifestyle.module_more.R;
 
 @Route(path = RouterConfig.ModuleMore.MainMoreFrag)
