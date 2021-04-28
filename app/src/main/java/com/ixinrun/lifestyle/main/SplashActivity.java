@@ -19,6 +19,13 @@ import com.ixinrun.lifestyle.common.mgr.StorageMgr;
 
 import java.util.Random;
 
+/**
+ * 描述: 闪屏
+ * </p>
+ *
+ * @author ixinrun
+ * @date 2020/6/8
+ */
 public class SplashActivity extends BaseLsAct {
 
     @Override

@@ -15,7 +15,13 @@ import com.ixinrun.lifestyle.common.base.BaseLsAct;
 import com.ixinrun.lifestyle.router.RouterConfig;
 import com.ixinrun.lifestyle.widget.MainNavigationBar;
 
-
+/**
+ * 描述: 主页
+ * </p>
+ *
+ * @author ixinrun
+ * @date 2020/6/8
+ */
 public class MainActivity extends BaseLsAct {
 
     private Fragment mMainStepFrag;
