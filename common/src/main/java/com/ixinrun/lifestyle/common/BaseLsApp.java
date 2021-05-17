@@ -13,17 +13,6 @@ import com.ixinrun.base.utils.LoggerUtil;
  */
 public class BaseLsApp extends BaseApplication {
 
-    /**
-     * 各个模块Application路径注册
-     */
-    private static final String[] MODULESLIST = {
-            "com.ixinrun.lifestyle.App",
-            "com.ixinrun.lifestyle.module_run.App",
-            "com.ixinrun.lifestyle.module_eat.App",
-            "com.ixinrun.lifestyle.module_more.App",
-            "com.ixinrun.lifestyle.module_user.App",
-    };
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -44,6 +33,17 @@ public class BaseLsApp extends BaseApplication {
         }
         ARouter.init(this);
     }
+
+    /**
+     * 各个模块Application路径注册
+     */
+    private static final String[] MODULESLIST = {
+            "com.ixinrun.lifestyle.App",
+            "com.ixinrun.lifestyle.module_run.App",
+            "com.ixinrun.lifestyle.module_eat.App",
+            "com.ixinrun.lifestyle.module_more.App",
+            "com.ixinrun.lifestyle.module_user.App",
+    };
 
     /**
      * 回调各个application
